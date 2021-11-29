@@ -1,8 +1,12 @@
 # 如何命名
 
-子曰：「名不正则言不顺，言不顺则事不成。」
+> 「名不正则言不顺，言不顺则事不成。」 ——孔子
+
+> 「There are only two hard things in Computer Science: cache invalidation and naming things.」 —— Phil Karlton
+
 在编程中，命名是非常重要的一件事情，直接影响代码的可读性。
-下面介绍命名的基本原则及具体规范。
+同时，命名并非一件容易的事情。下文将介绍命名的一些基本原则及具体规范，
+希望能够帮助大家以后在编程中尽可能使用好的名字。
 
 ## 关于命名的一些原则
 
@@ -26,6 +30,9 @@
   // 好的变量名
   int elapsedTimeInDays;
   ```
+
+- 一个好名字能让我一眼看出函数的用途，而不必查看其实现代码。
+  - 一个改进函数名字的好办法：先写一句注释描述这个函数的用途，再把这句注释变成函数的名字。
 
 - 以问题为导向
   - 好的名字反映的通常都是问题，而不是解决方案。
@@ -57,6 +64,12 @@
   - source/target
   - source/destination
   - up/down
+
+- 做有意义的区分
+  - 不要使用数字后缀来区分名字。
+    - 举例：a1, a2, ..., aN
+  - 不要使用废话来区分名字。
+    - 废话举例：NameString， CustomerObject 和 moneyAmount
 
 ## 为特定类型的数据命名
 
@@ -128,6 +141,14 @@
     - `if (isFound)`的可读性要略差于`if (found)`
   - 使用肯定的布尔变量名
     - 双重否定的可读性很差。举例：`if not notFound`
+
+- 类名
+  - 类名和对象名应该是名词或名词短语。
+  - 举例：Customer, WikiPage, Account, AddressParser
+
+- 方法名
+  - 方法名应该是动词或动词短语。
+  - 举例：PostPayment, deletePage, save
 
 ## 参考资料
 
