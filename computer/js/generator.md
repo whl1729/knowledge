@@ -1,10 +1,10 @@
 # 生成器
 
-目前不少语言都支持生成器，比如JavaScript和Python。下面分别讨论。
+目前不少语言都支持生成器，比如JavaScript和Python。下面结合这些语言进行讨论。
 
-## JavaScript 生成器
+## 什么是生成器？
 
-### 什么是生成器？
+### JavaScript 生成器
 
 MDN的定义是：
 
@@ -28,12 +28,22 @@ MDN的定义是：
 
 很简单，前者含有返回后者的方法。即可迭代对象定义了一个`@@iterator`方法，这个方法返回一个迭代器。
 
+### Python 生成器
+
+## 为什么需要生成器？
+
+按照[PEP 255][4]的说法，生成器是为了解决生产者函数在实现复杂的任务时需要维护状态的问题而诞生的。
+简而言之，生成器可以使我们编程更简单。但到底简单了哪里，需要实践来加深理解。
+可以对比同一个问题使用生成器来解决和不使用生成器来解决的情况，来理解生成器的作用。
+
 ## 参考资料
 
 1. [MDN: Generator][1]
 2. [Iteration protocols][2]
 3. [What exactly are iterator, iterable, and iteration?][3]
+4. [PEP 255 -- Simple Generators][4]
 
   [1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator
   [2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
   [3]: https://stackoverflow.com/questions/9884132/what-exactly-are-iterator-iterable-and-iteration
+  [4]: https://www.python.org/dev/peps/pep-0255/
