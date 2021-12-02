@@ -36,6 +36,60 @@ MDN的定义是：
 简而言之，生成器可以使我们编程更简单。但到底简单了哪里，需要实践来加深理解。
 可以对比同一个问题使用生成器来解决和不使用生成器来解决的情况，来理解生成器的作用。
 
+### 案例1：作为迭代器的生成器
+
+#### 使用生成器
+
+```javascript
+function* fib() {
+  let a = 0
+  let b = 1
+  let temp
+  for (let i = 0; i < 100; i++) {
+    yield b
+    temp = a
+    a = b
+    b = b + temp
+  }
+}
+
+// for-of loops
+for (let f of fib()) {
+  console.log(f)
+}
+```
+
+### 案例2：计算Fibonacci数列的元素
+
+实现一个函数fib，每次调用该函数时会返回Fibonacci数列的一个元素。
+
+#### 使用生成器
+
+```python
+def fib():
+    a, b = 0, 1
+    while 1:
+        yield b
+        a, b = b, a+b
+```
+
+#### 不使用生成器
+
+```python
+a, b = 0, 1
+
+def fib():
+    global a, b
+    a, b = b, a+b
+    return a
+```
+
+#### 对比
+
+使用生成器的封装性更好。
+这个问题是不断返回一个无穷序列的元素，因此需要维持状态，
+如果不使用生成器，需要在函数外部维持状态，从而破坏了封装性。
+
 ## 参考资料
 
 1. [MDN: Generator][1]
