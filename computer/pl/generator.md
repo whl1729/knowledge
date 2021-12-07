@@ -115,44 +115,6 @@ def fib():
 
 ## 生成器与异步编程有什么联系？
 
-### 首先，什么是异步编程？
-
-要理解异步编程，那应该先理解「同步编程」。
-同步编程的概念很简单，就是逐步执行，上一步未执行完成就不会执行下一步。
-而异步编程中就不是这样子了：上一步的语句可能会晚于下一步的语句执行。
-举个例子：
-
-```javascript
-// 同步编程
-function sayHello() {
-  console.log('Hello ')
-}
-
-sayHello();
-console.log('world!')
-```
-
-```javascript
-// 异步编程
-function sayHello() {
-  return new Promise((resolve, reject) => {
-  const timer = setInterval(() => {
-    clearInterval(timer)
-    resolve(console.log('Hello '))
-  }, 1000)
-  })
-}
-
-sayHello();  // doSomething 是异步函数（async）
-console.log('world!')
-```
-
-上面这个例子中，同步编程的情况很简单，从上到下逐步执行，因此先打印"Hello "后打印"world!"
-异步编程的情况就不一样的：
-虽然sayHello的函数也是首先被执行，但打印Hello的事件发生在一秒之后， 因此先打印"world!"后打印"Hello "。
-
-这么看来，我上面关于「异步编程」的描述好像不太准确，需要再做斟酌。
-
 ## 参考资料
 
 1. [MDN: Generator][1]
