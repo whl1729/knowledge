@@ -65,7 +65,7 @@ The from form uses a slightly more complex process:
   - otherwise, a reference to that value is stored in the local namespace,
     using the name in the as clause if it is present, otherwise using the attribute name
 
-[realpython 网站上的这篇博客][6]也描述了Python import 的工作机制：
+[realpython 的这篇博客][6]也描述了Python import 的工作机制：
 
 - The first thing Python will do is look up the name abc in `sys.modules`.
   This is a cache of all modules that have been previously imported.
@@ -73,6 +73,37 @@ The from form uses a slightly more complex process:
   These are modules that come pre-installed with Python and can be found in the Python Standard Library.
 - If the name still isn’t found in the built-in modules, Python then searches for it in a list of directories defined by `sys.path`.
   This list usually includes the **current directory**, which is searched first.
+
+## 模块加载机制
+
+[stack overflow 的这个回答][7] 通俗易懂地解释了 Python 模块加载的工作机制：
+
+- running vs importing
+  - There is a big difference between directly running a Python file, and importing that file from somewhere else.
+  - **Just knowing what directory a file is in does not determine what package Python thinks it is in.**
+  - That depends, additionally, on how you load the file into Python (by running or by importing).
+
+- Two ways to load a Python file
+  - As the top-level script
+    - A file is loaded as the top-level script if you execute it directly, for instance by typing python myfile.py on the command line.
+    - There can only be one top-level script at a time; the top-level script is the Python file you ran to start things off.
+  - As a module
+    - A file is loaded as a module when an import statement is encountered inside some other file.
+
+- Naming
+  - When a file is loaded, it is given a name (which is stored in its `__name__` attribute).
+  - If it was loaded as the top-level script, its name is `__main__`.
+  - If it was loaded as a module, its name is the filename, preceded by the names of any packages/subpackages of which it is a part, separated by dots.
+  - **If a module's name has no dots, it is not considered to be part of a package.**
+
+- Relative imports vs module name
+  - if your module's name is `__main__`, it is not considered to be in a package.
+  - Its name has no dots, and therefore you cannot use `from .. import` statements inside it.
+  - If you try to do so, you will get the "relative-import in non-package" error.
+
+- Relative imports in interactive interpreter
+  - When you run the interactive interpreter, the "name" of that interactive session is always `__main__`.
+  - Thus you cannot do relative imports directly from an interactive session. Relative imports are only for use within module files.
 
 ## Python 官方约定的 Import 风格
 
@@ -99,4 +130,5 @@ The from form uses a slightly more complex process:
   [4]: https://www.python.org/dev/peps/pep-0008/#imports
   [5]: https://docs.python.org/3/tutorial/modules.html#the-module-search-path
   [6]: https://realpython.com/absolute-vs-relative-python-imports/#how-imports-work
+  [7]: https://stackoverflow.com/a/14132912/11467929
 
