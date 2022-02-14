@@ -41,7 +41,27 @@ relative_module ::=  "."* module | "."+
 - `import foo.hi`是非法的，报错信息如下：
   `ModuleNotFoundError: No module named 'foo.hi'; 'foo' is not a package`
 
+## Python 官方约定的 Import 风格
+
+[PEP-8 约定了 Import 语句的风格][4]：
+
+- Imports should usually be on separate lines.
+- Imports are always put at the top of the file, just after any module comments and docstrings, and before module globals and constants.
+  - Imports should be grouped in the following order:
+    - Standard library imports.
+    - Related third party imports.
+    - Local application/library specific imports.
+- Absolute imports are recommended,
+  - as they are usually more readable and
+  tend to be better behaved (or at least give better error messages) if the import system is incorrectly configured
+  (such as when a directory inside a package ends up on sys.path).
+  - Explicit relative imports are an acceptable alternative to absolute imports,
+    especially when dealing with complex package layouts where using absolute imports would be unnecessarily verbose
+- When importing a class from a class-containing module, it's usually okay to import the class name.
+- Wildcard imports (`from <module> import *`) should be avoided.
+
   [1]: https://www.python.org/dev/peps/pep-0328/#rationale-for-absolute-imports
   [2]: https://www.python.org/dev/peps/pep-0328/#rationale-for-relative-imports
   [3]: https://docs.python.org/3/reference/simple_stmts.html#the-import-statement
+  [4]: https://www.python.org/dev/peps/pep-0008/#imports
 
