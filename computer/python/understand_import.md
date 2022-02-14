@@ -41,6 +41,39 @@ relative_module ::=  "."* module | "."+
 - `import foo.hi`是非法的，报错信息如下：
   `ModuleNotFoundError: No module named 'foo.hi'; 'foo' is not a package`
 
+## 模块搜索机制
+
+[Python Tutorial "6. Modules"][5]描述了 "The Module Search Path":
+
+When a module named spam is imported, the interpreter first searches for a built-in module with that name.
+If not found, it then searches for a file named spam.py in a list of directories given by the variable sys.path.
+sys.path is initialized from these locations:
+
+- The directory containing the input script (or the current directory when no file is specified).
+- PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).
+- The installation-dependent default (by convention including a site-packages directory, handled by the site module).
+
+[Python Reference "7.11 The import statement"][3]描述了 `from <> import` 的搜索算法：
+
+The from form uses a slightly more complex process:
+
+- find the module specified in the from clause, loading and initializing it if necessary;
+- for each of the identifiers specified in the import clauses:
+  - check if the imported module has an attribute by that name
+  - if not, attempt to import a submodule with that name and then check the imported module again for that attribute
+  - if the attribute is not found, ImportError is raised.
+  - otherwise, a reference to that value is stored in the local namespace,
+    using the name in the as clause if it is present, otherwise using the attribute name
+
+[realpython 网站上的这篇博客][6]也描述了Python import 的工作机制：
+
+- The first thing Python will do is look up the name abc in `sys.modules`.
+  This is a cache of all modules that have been previously imported.
+- If the name isn’t found in the module cache, Python will proceed to search through a list of **built-in modules**.
+  These are modules that come pre-installed with Python and can be found in the Python Standard Library.
+- If the name still isn’t found in the built-in modules, Python then searches for it in a list of directories defined by `sys.path`.
+  This list usually includes the **current directory**, which is searched first.
+
 ## Python 官方约定的 Import 风格
 
 [PEP-8 约定了 Import 语句的风格][4]：
@@ -64,4 +97,6 @@ relative_module ::=  "."* module | "."+
   [2]: https://www.python.org/dev/peps/pep-0328/#rationale-for-relative-imports
   [3]: https://docs.python.org/3/reference/simple_stmts.html#the-import-statement
   [4]: https://www.python.org/dev/peps/pep-0008/#imports
+  [5]: https://docs.python.org/3/tutorial/modules.html#the-module-search-path
+  [6]: https://realpython.com/absolute-vs-relative-python-imports/#how-imports-work
 
