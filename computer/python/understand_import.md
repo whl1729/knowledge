@@ -13,7 +13,7 @@
 > The most important of which is being able to rearrange the structure of large packages without having to edit sub-packages.
 > In addition, a module inside a package can't easily import itself without relative imports.
 
-## `import <>`语句不能 import 模块内的属性，而`from <> import`语句可以
+## `import <>`不能 import 模块内的属性，而`from <> import`可以
 
 先来看看[Python Reference 定义的 "The import statement"][3]:
 
@@ -28,7 +28,7 @@ module          ::=  (identifier ".")* identifier
 relative_module ::=  "."* module | "."+
 ```
 
-普通的 import 语句与 from import 语句在 import 对象上的异同点如下：
+从以上描述可以发现，import 语句与 from import 语句在 import 对象上存在以下异同点：
 
 - 相同点：两者都可以 import 模块（也可以 import 包，毕竟 package is also module.）
 - 不同点：普通的 import 语句只能 import 模块，不能 import 模块中的属性；
@@ -43,17 +43,31 @@ relative_module ::=  "."* module | "."+
 
 ## 模块搜索机制
 
+我从 Python Tutorial，Python Reference 和 realpython 网站上摘录了相关内容，如下所述。
+综合这些内容，Python 的模块搜索机制可以概括如下：
+
+- 首先查看`sys.modules`，这个是 Python 对已加载模块的缓存。
+- 然后查看 built-in 模块。
+- 最后查看`sys.path`，这个由三部分组成
+  - 当前脚本所在路径
+  - 环境变量 PYTHONPATH 配置的路径
+  - 与Python 安装路径相关的一些路径（如 site-packages）
+
+### The Module Search Path
+
 [Python Tutorial "6. Modules"][5]描述了 "The Module Search Path":
 
-When a module named spam is imported, the interpreter first searches for a built-in module with that name.
-If not found, it then searches for a file named spam.py in a list of directories given by the variable sys.path.
-sys.path is initialized from these locations:
+When a module named spam is imported, the interpreter first searches for a **built-in** module with that name.
+If not found, it then searches for a file named spam.py in a list of directories given by the variable `sys.path`.
+`sys.path` is initialized from these locations:
 
 - The directory containing the input script (or the current directory when no file is specified).
-- PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).
-- The installation-dependent default (by convention including a site-packages directory, handled by the site module).
+- `PYTHONPATH` (a list of directory names, with the same syntax as the shell variable PATH).
+- The installation-dependent default (by convention including a `site-packages` directory, handled by the site module).
 
-[Python Reference "7.11 The import statement"][3]描述了 `from <> import` 的搜索算法：
+### `from <> import` 的搜索过程
+
+[Python Reference "7.11 The import statement"][3]描述了 `from <> import` 的搜索过程：
 
 The from form uses a slightly more complex process:
 
@@ -64,6 +78,8 @@ The from form uses a slightly more complex process:
   - if the attribute is not found, ImportError is raised.
   - otherwise, a reference to that value is stored in the local namespace,
     using the name in the as clause if it is present, otherwise using the attribute name
+
+### Python import 的工作机制
 
 [realpython 的这篇博客][6]也描述了Python import 的工作机制：
 
