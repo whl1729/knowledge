@@ -24,7 +24,7 @@ Error: EACCES: permission denied, access '/usr/local/lib'
 - 使用 nvm 安装 node：
 
   ```sh
-  export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+  export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node/
   nvm install node
   ```
 
