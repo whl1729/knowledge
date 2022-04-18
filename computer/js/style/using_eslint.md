@@ -24,8 +24,14 @@
   npx eslint yourfile.js
   ```
 
-## Configuration
+- Auto fix some errors
 
+  ```sh
+  npx eslint -- --fix
+  ```
+
+## Configuration
+eslint
 - Set rules in `.eslintrc.{js,yml,json}`
   - The names "semi" and "quotes" are the names of rules in ESLint.
   - The first value is the error level of the rule and can be one of these values:
