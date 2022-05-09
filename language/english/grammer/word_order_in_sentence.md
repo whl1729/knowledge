@@ -19,4 +19,16 @@
 - At this point, then, we can reintroduce what has been until now, it is hoped, resolutely pushed aside in an effort to view our lives and human existence with objectivity;
   namely, our own wills, our deep interest in what we find ourselves doing.
 
-> 伍注：暂时看不懂这句话。
+> 伍注：看不懂这句话。
+
+## 《The Absurd》 (Thomas Nagel)
+
+- After acknowledging that their truth is incompatible with possibilities that we have no grounds for believing do not obtain—
+  apart from grounds in those very beliefs which we have called into question—
+  we return to our familiar convictions with a certain irony and resignation.
+
+> 伍注：看不懂这句话，主要是"believing do not obtain"不知道是怎么跟前面连接的。
+
+## 《Absurd Self-Fulfillment》 (Joel Feinberg)
+
+- But it is logically irrelevant to the question of what my good is whether my good is itself "good" when judged from an external position.
