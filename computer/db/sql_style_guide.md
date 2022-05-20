@@ -165,13 +165,13 @@ Use the correct suffix where appropriate.
 
 - Use `LIKE` and `SIMILAR` TO constraints to ensure the integrity of strings where the format is known.
 
-- Where the ultimate range of a numerical value is known it must be written as a range `CHECK()` 
+- Where the ultimate range of a numerical value is known it must be written as a range `CHECK()`
   to prevent incorrect values entering the database or the silent truncation of data too large to fit the column definition.
   In the least it should check that the value is greater than zero in most cases.
 
 - `CHECK()` constraints should be kept in separate clauses to ease debugging.
 
-### Index
+### Create Index
 
 - 业务上具有唯一特性的字段，即使是组合字段，也必须建成唯一索引。
   - 不要以为唯一索引影响了 insert 速度，这个速度损耗可以忽略，但提高查找速度是明显的；

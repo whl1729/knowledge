@@ -69,7 +69,7 @@
 
 #### Forking 工作流
 
-- Git Flow vs Forking 
+- Git Flow vs Forking
   - 在非开源项目中，最常用到的是 Git Flow 工作流
   - 在开源项目中，最常用到的是 Forking 工作流，例如 Kubernetes、Docker 等项目用的就是这种工作流。
 
@@ -120,4 +120,3 @@
 ### Q17: 这一章对我有哪些用处/帮助/启示？
 
 ### Q18: 我如何应用这一章的知识去解决问题？
-

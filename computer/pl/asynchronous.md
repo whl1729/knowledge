@@ -83,4 +83,3 @@ function greet() {
 ### 在JavaScript中能否不用promise来实现异步编程？
 
 ### 将上面的异步编程例子里的sayHello函数中的await关键字去掉，结果会怎样？
-

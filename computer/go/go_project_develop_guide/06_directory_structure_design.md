@@ -146,9 +146,9 @@
   - 这里有一点要注意，配置中不能携带敏感信息，这些敏感信息，我们可以用占位符来替代，例如：
 
   ```yaml
-  apiVersion: v1    
-  user:    
-    username: ${CONFIG_USER_USERNAME} # iam 用户名    
+  apiVersion: v1
+  user:
+    username: ${CONFIG_USER_USERNAME} # iam 用户名
     password: ${CONFIG_USER_PASSWORD} # iam 密码
   ```
 
@@ -274,4 +274,3 @@
   [7]: common_functions_of_makefile.md
   [8]: https://github.com/golang-standards/project-layout
   [9]: common_functions_of_go_project.md
-

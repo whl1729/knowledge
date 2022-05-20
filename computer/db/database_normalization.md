@@ -4,7 +4,7 @@
 
 这是维基百科词条[Database normalization][1]给出的定义：
 
-> Database normalization is the process of structuring a database, usually a relational database, 
+> Database normalization is the process of structuring a database, usually a relational database,
 > in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.
 
 这是[中文版的定义][2]：
@@ -67,7 +67,7 @@
 > Codd's definition states that a table is in 3NF if and only if both of the following conditions hold:
 >
 > The relation R (table) is in second normal form (2NF).
-> Every non-prime attribute of R is non-transitively dependent on every key of R. 
+> Every non-prime attribute of R is non-transitively dependent on every key of R.
 
 这是[极客时间课程《MySQL 必知必会》对「第三范式」的解释][12]：
 

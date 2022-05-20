@@ -17,7 +17,7 @@
 
 先来看看[Python Reference 定义的 "The import statement"][3]:
 
-```
+```text
 import_stmt     ::=  "import" module ["as" identifier] ("," module ["as" identifier])*
                      | "from" relative_module "import" identifier ["as" identifier]
                      ("," identifier ["as" identifier])*
@@ -147,4 +147,3 @@ The from form uses a slightly more complex process:
   [5]: https://docs.python.org/3/tutorial/modules.html#the-module-search-path
   [6]: https://realpython.com/absolute-vs-relative-python-imports/#how-imports-work
   [7]: https://stackoverflow.com/a/14132912/11467929
-

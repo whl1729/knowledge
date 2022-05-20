@@ -61,9 +61,9 @@
 - 资源名使用名词而不是动词，并且用名词复数表示。
   - 资源分为 Collection 和 Member 两种
   - Collection：一堆资源的集合。例如我们系统里有很多用户（User）, 这些用户的集合就是 Collection。
-    Collection 的 URI 标识应该是 「域名/资源名复数」, 例如https:// iam.api.marmotedu.com/users。
+    Collection 的 URI 标识应该是 「域名/资源名复数」, 例如 `https:// iam.api.marmotedu.com/users`。
   - Member：单个特定资源。例如系统中特定名字的用户，就是 Collection 里的一个 Member。
-    Member 的 URI 标识应该是 「域名/资源名复数/资源名称」, 例如https:// iam.api.marmotedu/users/admin。
+    Member 的 URI 标识应该是 「域名/资源名复数/资源名称」, 例如 `https:// iam.api.marmotedu/users/admin`。
 
 - URI 结尾不应包含/。
 
@@ -124,7 +124,7 @@
 
 - API 的3种命令方式
   - 驼峰命名法 (serverAddress)
-  - 蛇形命名法 (server_address) 
+  - 蛇形命名法 (server_address)
   - 脊柱命名法 (server-address) （不需切换输入法，推荐）
 
 ##### 统一分页/过滤/排序/搜索功能
@@ -175,7 +175,7 @@
   - 查询接口
     - 应该支持分页 / 过滤 / 排序 / 搜索功能，这些功能可以用同一套机制来实现。
   - 域名风格
-    - 可以采用 https://marmotedu.com/api 和 https://iam.api.marmotedu.com 两种格式。
+    - 可以采用 `https://marmotedu.com/api` 和 `https://iam.api.marmotedu.com` 两种格式。
 
 ### Q7：作者是怎么论述的？
 

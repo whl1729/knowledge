@@ -94,7 +94,7 @@ const good = {
 ```
 
 - 3.8: Prefer the object spread syntax over `Object.assign` to shallow-copy objects.
-  Use the object rest parameter syntax to get a new object with certain properties omitted. 
+  Use the object rest parameter syntax to get a new object with certain properties omitted.
 
 ```javascript
 // very bad
@@ -197,7 +197,7 @@ function getFullName({ firstName, lastName }) {
 }
 ```
 
-- 5.2: Use array destructuring. 
+- 5.2: Use array destructuring.
 
 ```javascript
 const arr = [1, 2, 3, 4];
@@ -751,7 +751,7 @@ function getProp(prop) {
 const isJedi = getProp('jedi');
 ```
 
-- 12.3: Use exponentiation operator `**` when calculating exponentiations. 
+- 12.3: Use exponentiation operator `**` when calculating exponentiations.
 
 ## Variables
 
@@ -827,7 +827,7 @@ console.log(c); // throws ReferenceError
 // the same applies for `const`
 ```
 
-- 13.6: Avoid using unary increments and decrements (`++`, `--`). 
+- 13.6: Avoid using unary increments and decrements (`++`, `--`).
 
 - 13.7: Avoid linebreaks before or after = in an assignment.
   If your assignment violates max-len, surround the value in parens.
@@ -852,9 +852,10 @@ const foo = 'superLongLongLongLongLongLongLongLongString';
 
 ## Comparison Operators & Equality
 
-- 15.1: Use `===` and `!==` over `==` and `!=`. 
+- 15.1: Use `===` and `!==` over `==` and `!=`.
 
-- 15.2: Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method and always follow these simple rules:
+- 15.2: Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method
+  and always follow these simple rules:
   - Objects evaluate to true
   - Undefined evaluates to false
   - Null evaluates to false
@@ -983,7 +984,8 @@ if (!isRunning) {
 
 - 20.2: Additional trailing comma: **Yup**.
   - Why? This leads to cleaner git diffs.
-  - Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don’t have to worry about the trailing comma problem in legacy browsers.
+  - Also, transpilers like Babel will remove the additional trailing comma in the transpiled code
+    which means you don't have to worry about the trailing comma problem in legacy browsers.
 
 ## Semicolons
 
