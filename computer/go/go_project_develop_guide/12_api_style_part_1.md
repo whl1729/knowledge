@@ -88,7 +88,9 @@
   DELETE /gists/:id/star # github unstar action
   ```
 
-- 遇事不决可查看：[《GitHub 标准 RESTful API》][2]
+- 遇事不决可查看
+  - [《GitHub 标准 RESTful API》][2]
+  - [Google API Design Guide][3]
 
 ##### REST 资源操作映射为 HTTP 方法
 
@@ -201,3 +203,4 @@
 
   [1]: https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
   [2]: https://docs.github.com/en/rest
+  [3]: https://cloud.google.com/apis/design
