@@ -712,8 +712,11 @@ include <filename>
   - `$?` 所有比目标新的依赖目标的集合，以空格分隔。 - 比如，规则为 `t: p1 p2`，其中 p2 的时间戳比 t 新，`$?` 就指代 p2。
   - `$^` 所有的依赖目标的集合。以空格分隔。如果在依赖目标中有多个重复的，那么这个变量会去除重复的依赖目标，只保留一份。
   - `$+` 这个变量很像 `$^`，也是所有依赖目标的集合。只是它不去除重复的依赖目标。
-  - `$*` 这个变量表示目标模式中 % 及其之前的部分。
-    比如，如果目标是 dir/a.foo.b ，并且目标的模式是 a.%.b ，那么， `$*` 的值就是 dir/a.foo 。
+  - `$*` [The stem with which an implicit rule matches][2]. 粗略地说，这个变量表示目标模式中 % 匹配的内容。
+    比如，如果目标是 a.foo.b，并且目标的模式是 a.%.b，那么 `$*` 的值就是 foo。
+    但如果目标是 dir/a.foo.b ，并且目标的模式是 a.%.b ，那么， `$*` 的值就是 dir/foo 。
+
+> 伍注：`$*` 的准确含义请参考 GNU make 手册，平时使用的话，理解好以上例子的两种情况应该就够了。
 
 - 自动化变量加上 D 或 F 的含义
   - `$(@D)` 表示 `$@` 的目录部分（不以斜杠作为结尾），如果 `$@` 值是 dir/foo.o ，那么 `$(@D)` 就是 dir，
@@ -756,3 +759,4 @@ include <filename>
 - [GNU make's manual](https://www.gnu.org/software/make/manual/html_node/index.html#SEC_Contents)
 
   [1]: https://www.gnu.org/software/make/manual/html_node/Setting.html
+  [2]: https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
