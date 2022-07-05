@@ -6,7 +6,7 @@
 
 使用`npm install -g`全局安装 package 时，可能报以下错误：
 
-```
+```sh
 Error: EACCES: permission denied, access '/usr/local/lib'
 ```
 
