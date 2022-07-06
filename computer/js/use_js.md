@@ -28,6 +28,9 @@ Error: EACCES: permission denied, access '/usr/local/lib'
   nvm install node
   ```
 
+- 如果 nvm 安装 node 很慢，可以手动下载 node 安装包，将其解压到 `~/.nvm/versions/node/` 目录的指定版本目录下，
+  再执行 `nvm use` 即可。
+
   [1]: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
   [2]: https://github.com/nvm-sh/nvm
   [3]: https://github.com/nvm-sh/nvm/blob/v0.39.1/install.sh
