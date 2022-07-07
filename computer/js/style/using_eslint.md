@@ -31,7 +31,7 @@
   ```
 
 ## Configuration
-eslint
+
 - Set rules in `.eslintrc.{js,yml,json}`
   - The names "semi" and "quotes" are the names of rules in ESLint.
   - The first value is the error level of the rule and can be one of these values:
