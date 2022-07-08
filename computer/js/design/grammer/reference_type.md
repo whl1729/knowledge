@@ -14,6 +14,7 @@ console.log(str)
 ```
 
 这段代码的打印结果是什么？我以为是'hello world'，我的推理逻辑如下：
+
 1. String 类型属于 Object 类型
 2. Object 类型都属于 引用类型
 3. 把 String 变量传递给函数时，传递的是引用而非值，因此会修改原来的变量

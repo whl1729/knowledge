@@ -22,5 +22,5 @@
   ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/" npm install
   ```
 
-  [1]: fail_to_install_electron_because_of_error_mirror.md
+  [1]: fail_to_install_electron_due_to_error_mirror.md
   [2]: https://npm.taobao.org/mirrors/electron/
