@@ -26,6 +26,7 @@ repos:
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
+        args: [--maxkb=123]
 ```
 
 ### Check Commit Message
