@@ -28,7 +28,7 @@ npx husky-init && npm install
   echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
   ```
 
-- 添加钩子
+- [添加钩子][5]
 
   ```bash
   cat <<EEE > .husky/commit-msg
@@ -117,7 +117,7 @@ npx husky-init && npm install
   npm i --save-dev lint-staged
   ```
 
-8. 修改 `.husky/pre-commit`
+8. 修改 [`.husky/pre-commit`][6]
 
   ```sh
   #!/bin/sh
@@ -142,3 +142,5 @@ npx husky-init && npm install
   [2]: https://typicode.github.io/husky/#/
   [3]: https://github.com/conventional-changelog/commitlint
   [4]: https://www.coffeeclass.io/articles/commit-better-code-with-husky-prettier-eslint-lint-staged
+  [5]: commit-msg
+  [6]: pre-commit
