@@ -23,7 +23,7 @@ func Errorf(format string, a ...any) error
 
 ```text
 %v    the value in a default format
-    when printing structs, the plus flag (%+v) adds field names
+    **when printing structs, the plus flag (%+v) adds field names**
 %#v    a Go-syntax representation of the value
 %T    a Go-syntax representation of the type of the value
 %%    a literal percent sign; consumes no value
@@ -53,6 +53,7 @@ pointer to above:   &{}, &[], &map[]
 > 伍注：
 > 1. 对于 string 变量，`%v` 直接打印内容，`%#v` 则还会打印双引号。
 > 2. 记忆方法：v 为 value 的首字母，T 为 Type 的首字母。
+> 3. `%+v` 打印结构体时会把字段名也打印出来，方便查看。
 
 ### Boolean
 
