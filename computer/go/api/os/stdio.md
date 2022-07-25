@@ -29,6 +29,28 @@ func Errorf(format string, a ...any) error
 %%    a literal percent sign; consumes no value
 ```
 
+> 伍注：什么叫 Go-syntax representation 呢？看下面这个例子就能明白了。
+
+```go
+type T struct {
+    a int
+    b float64
+    c string
+}
+t := &T{ 7, -2.35, "abc\tdef" }
+fmt.Printf("%v\n", t)
+fmt.Printf("%+v\n", t)
+fmt.Printf("%#v\n", t)
+```
+
+prints
+
+```go
+&{7 -2.35 abc   def}
+&{a:7 b:-2.35 c:abc     def}
+&main.T{a:7, b:-2.35, c:"abc\tdef"}
+```
+
 The default format for `%v` is:
 
 ```text
