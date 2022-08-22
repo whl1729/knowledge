@@ -1,5 +1,12 @@
 # npm 使用笔记
 
+## 查看 node.js 版本 与 ECMAScript 版本的对应关系
+
+- 参考网站：[node.green][6]
+  - The website node.green provides an excellent overview over supported ECMAScript features in various versions of Node.js,
+    based on kangax's compat-table.
+  - 往下拉即可看到不同 ECMAScript 版本被 node.js 的支持情况
+
 ## 安装 npm
 
 ### 解决 npm 全局安装没有权限的问题
@@ -46,3 +53,4 @@ Error: EACCES: permission denied, access '/usr/local/lib'
   [3]: https://github.com/nvm-sh/nvm/blob/v0.39.1/install.sh
   [4]: https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
   [5]: https://nodejs.dev/learn/semantic-versioning-using-npm
+  [6]: https://node.green/
