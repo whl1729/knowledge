@@ -1,8 +1,89 @@
 # MySQL 使用笔记
 
+## Basic Knowledge
+
+### Data Type
+
+- Boolean data type
+  - MySQL does not have a boolean (or bool) data type.
+  - Instead, it converts boolean values into integer data types (`TINYINT`).
+  - When you create a table with a boolean data type, MySQL outputs data as 0, if false, and 1, if true.
+
 ## Common Commands
 
+### Account Management
+
+- 创建用户
+
+  ```sql
+  CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'newpassword';
+  GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+  FLUSH PRIVILEGES;
+  ```
+
+- 删除用户
+
+  ```sql
+  DROP USER 'newuser'@'localhost';
+  ```
+
+- 查看用户
+
+  ```sql
+  USE mysql;
+
+  -- show all users
+  SELECT user from user;
+
+  -- show current user
+  SELECT USER();
+  ```
+
+- 切换用户
+
+  ```mysql
+  system mysql -u newuser -p
+  ```
+
+### Database
+
+- 显示所有数据库
+
+  ```sql
+  SHOW DATABASES;
+  ```
+
+- 显示当前数据库
+
+  ```sql
+  SELECT DATABASE();
+  ```
+
+- 创建数据库
+
+  ```sql
+  CREATE DATABASE db_name;
+  ```
+
+- 使用数据库
+
+  ```sql
+  USE db_name;
+  ```
+
 ### Table
+
+- 显示表
+
+  ```sql
+  SHOW TABLES;
+  ```
+
+- 显示表的字段
+
+  ```sql
+  DESCRIBE tbl_name
+  ```
 
 - 重命名某一列
 
@@ -18,6 +99,26 @@
   ALTER TABLE tbl_name
   MODIFY COLUMN col_name column_definition
   [FIRST | AFTER col_name]
+  ```
+
+- 删除表
+
+  ```sql
+  DROP TABLE tbl_name;
+  ```
+
+- 查看外键
+
+  ```sql
+  SELECT
+    TABLE_NAME,
+    COLUMN_NAME,
+    CONSTRAINT_NAME,
+    REFERENCED_TABLE_NAME,
+    REFERENCED_COLUMN_NAME
+  FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+  WHERE
+    REFERENCED_TABLE_NAME = 'My_Table';
   ```
 
 ### Index
