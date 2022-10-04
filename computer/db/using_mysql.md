@@ -101,6 +101,13 @@
   [FIRST | AFTER col_name]
   ```
 
+- 删除一行
+
+  ```sql
+  DELETE FROM tbl_name
+  WHERE id=1;
+  ```
+
 - 删除表
 
   ```sql
