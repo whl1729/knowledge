@@ -1,5 +1,12 @@
 # docker 使用笔记
 
+- `docker build` 偶尔报错 `net/http: TLS handshake timeout` 的解决方案
+  - 这是网络不稳定导致的，可以编写 bash 脚本不断循环 build 直至成功。
+
+  ```bash
+  for i in {0..1000}; do docker build; if (($? == 0)); then break; fi done
+  ```
+
 - [配置 docker hub 镜像][4]
   - 检查 `/lib/systemd/system/docker.service` 的 `ExecStart=` 的值，如果含有 `--registry-mirror` 参数，则将此参数及其值删除。
   - 在 `/etc/docker/daemon.json` 中添加如下内容（若文件不存在则新建之）：
