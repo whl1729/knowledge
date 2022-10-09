@@ -1,5 +1,8 @@
 # docker 使用笔记
 
+- 安装 docker
+  - [Docker 官方文档][2] 默认让用户安装 Docker Desktop，如果你不想使用桌面版，可以只安装 [Docker Engine][3]。
+
 - [解决由于权限不足导致执行 `docker images` 报错的问题][1]
 
   ```bash
@@ -15,3 +18,5 @@
   ```
 
   [1]: https://stackoverflow.com/a/54504083
+  [2]: https://docs.docker.com/desktop/
+  [3]: https://docs.docker.com/engine/install/
