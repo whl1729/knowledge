@@ -1,5 +1,16 @@
 # docker 使用笔记
 
+- alpine 镜像中运行 elf 报错：`/bin/sh: /docker-gs-ping-roach: not found`
+  - 使用 ldd 命令查看 elf 文件的依赖库，发现其中依赖 libc，而 alpine 不包含 libc，导致无法运行 elf。
+  - 可以在 Dockerfile 里面增加 `apk add gcompat` 来安装 glibc。（参考[stack overflow][5]）
+
+  ```bash
+    / # ldd docker-gs-ping-roach
+    /lib64/ld-linux-x86-64.so.2 (0x7fd94dd0b000)
+    libpthread.so.0 => /lib64/ld-linux-x86-64.so.2 (0x7fd94dd0b000)
+    libc.so.6 => /lib64/ld-linux-x86-64.so.2 (0x7fd94dd0b000)
+  ```
+
 - `docker build` 偶尔报错 `net/http: TLS handshake timeout` 的解决方案
   - 这是网络不稳定导致的，可以编写 bash 脚本不断循环 build 直至成功。
 
@@ -48,3 +59,4 @@
   [2]: https://docs.docker.com/desktop/
   [3]: https://docs.docker.com/engine/install/
   [4]: https://yeasy.gitbook.io/docker_practice/install/mirror
+  [5]: https://stackoverflow.com/a/68284294
