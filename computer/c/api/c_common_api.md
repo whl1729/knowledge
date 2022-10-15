@@ -1,5 +1,51 @@
 # C 语言常用 API
 
+- pthread
+
+  ```c
+  #include <pthread.h>
+
+  int pthread_create(pthread_t *restrict tidp,
+                     const pthread_attr_t *restrict attr,
+                     void *(*start_rtn)(void *), void *restrict arg);
+
+  int pthread_join(pthread_t thread, void **rval_ptr);
+
+  // Both Returns: 0 if OK, error number on failure
+
+  void pthread_exit(void *rval_ptr);
+  ```
+
+- pthread mutex
+
+  ```c
+
+  #include <pthread.h>
+
+  int pthread_mutex_init(pthread_mutex_t *restrict mutex,
+                         const pthread_mutexattr_t *restrict attr);
+
+  int pthread_mutex_lock(pthread_mutex_t *mutex);
+  int pthread_mutex_trylock(pthread_mutex_t *mutex);
+  int pthread_mutex_unlock(pthread_mutex_t *mutex);
+  int pthread_mutex_destroy(pthread_mutex_t *mutex);
+
+  // All return: 0 if OK, error number on failure
+  ```
+
+- semaphore
+
+  ```c
+  #include <semaphore.h>
+
+  int sem_init(sem_t *sem, int pshared, unsigned int value);
+  int sem_wait(sem_t *sem);
+  int sem_post(sem_t *sem);
+  int sem_destroy(sem_t *sem);
+
+  // All Returns 0 on success; on error, -1 is returned, and errno is set to indicate the error.
+  ```
+
 - sleep vs usleep
 
   ```c
