@@ -9,6 +9,8 @@
                      const pthread_attr_t *restrict attr,
                      void *(*start_rtn)(void *), void *restrict arg);
 
+  // rval_ptr 参数的用法比较奇怪：
+  // 你需要定义 `int *val_ptr`; 然后将 `&val_ptr` 作为输入参数，最后通过 `(int)val_ptr` 获取线程返回值。
   int pthread_join(pthread_t thread, void **rval_ptr);
 
   // Both Returns: 0 if OK, error number on failure
