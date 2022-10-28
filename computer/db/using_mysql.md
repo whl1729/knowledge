@@ -128,6 +128,42 @@
     REFERENCED_TABLE_NAME = 'My_Table';
   ```
 
+### Select
+
+- 去重
+
+  ```sql
+  SELECT DISTINCT c1, c2, c3 FROM t1;
+  ```
+
+### Update
+
+- 命令格式
+
+  ```sql
+  UPDATE [LOW_PRIORITY] [IGNORE] table_reference
+      SET assignment_list
+      [WHERE where_condition]
+      [ORDER BY ...]
+      [LIMIT row_count]
+
+  value:
+      {expr | DEFAULT}
+
+  assignment:
+      col_name = value
+
+  assignment_list:
+      assignment [, assignment] ...
+  ```
+
+- 更新 datetime 字段
+  - MySQL recognizes DATETIME and TIMESTAMP values as a string in either 'YYYY-MM-DD hh:mm:ss' or 'YY-MM-DD hh:mm:ss' format.
+
+  ```sql
+  UPDATE products SET former_date='2011-12-18 13:17:17' WHERE id=1
+  ```
+
 ### Index
 
 - 创建索引
