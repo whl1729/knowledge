@@ -136,6 +136,26 @@
   SELECT DISTINCT c1, c2, c3 FROM t1;
   ```
 
+- 限制条目数量
+
+  ```sql
+  SELECT * FROM tbl LIMIT 5;  # Retrieve first 5 rows
+  ```
+
+- [统计条目数量][5]
+
+  ```sql
+  SELECT COUNT(*) FROM pet;
+  SELECT owner, COUNT(*) FROM pet GROUP BY owner;
+  ```
+
+- 筛选非空字符串
+
+  ```sql
+  SELECT * from devices WHERE mac is not NULL;  # 不能用 != NULL
+  SELECT * from devices WHERE mac != "";
+  ```
+
 ### Update
 
 - 命令格式
@@ -270,3 +290,4 @@
   [2]: https://dev.mysql.com/downloads/workbench/
   [3]: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
   [4]: https://dev.mysql.com/doc/refman/8.0/en/mysqlimport.html
+  [5]: https://dev.mysql.com/doc/refman/8.0/en/counting-rows.html
