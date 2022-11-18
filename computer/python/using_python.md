@@ -2,6 +2,9 @@
 
 ## 疑问
 
+- Python 设计问题：在一个类里面使用一个不依赖此类的函数时，应该怎么定义它？
+  - classmethod，staticmethod, method or function ?
+
 - `python -m pip install` 与  `pip install` 的区别？
 - `.spec` 文件有啥作用？
 - 为什么 pip install 新的包后，重新运行 pyinstaller 没有将其打包进去？
