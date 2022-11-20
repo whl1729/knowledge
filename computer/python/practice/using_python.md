@@ -9,6 +9,15 @@
 - `.spec` 文件有啥作用？
 - 为什么 pip install 新的包后，重新运行 pyinstaller 没有将其打包进去？
 
+## Python 编码
+
+- [utf vs unicode][1]
+  - [unicode -> utf-8][2]
+
+> 伍注：简单地说，unicode 制定了每个字符对应哪个数字的映射关系。
+> 但在实际使用时，为了能够正确从二进制流中分隔字符（也就是「解码」），需要先进行「编码」，否则将无法区分不同长度的字符。
+> utf-8 就是一种编码/解码的方式。
+
 ## Python 版本管理器
 
 - Tell Ubuntu that python is python3
@@ -32,3 +41,6 @@
   # 退出虚拟环境
   deactivate
   ```
+
+  [1]: https://stackoverflow.com/a/643810
+  [2]: https://stackoverflow.com/a/27939161
