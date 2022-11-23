@@ -50,8 +50,14 @@
   - repo: https://github.com/PyCQA/flake8
     rev: 4.0.1
     hooks:
-      - id: flake8
-        args: [--max-line-length=131, --max-complexity=10]
+    - id: flake8
+      args: [--max-line-length=131, --max-complexity=10]
+
+  - repo: https://github.com/markdownlint/markdownlint
+    rev: v0.11.0
+    hooks:
+    - id: markdownlint
+      args: [-s, .mdlrc.rb]
   ```
 
 ## Some useful git hooks
@@ -89,8 +95,29 @@ repos:
   - repo: https://hub.fastgit.xyz/markdownlint/markdownlint
     rev: v0.11.0
     hooks:
-      - id: markdownlint
+    - id: markdownlint
+      args: [-s, .mdlrc.rb]
 ```
+
+- [Example for mdlrc.rb][3]
+
+  ```ruby
+  all
+  exclude_rule 'MD001'
+  exclude_rule 'MD002'
+  rule 'MD013', :line_length => 160
+  rule 'MD026', :punctuation => ".,;:"
+  rule 'MD029', :style => false
+  ```
+
+- [Disable a rule on command line][3]
+  - see `mdl -h` for more details.
+
+  ```shell
+  mdl -r ~MD001,~MD002 xxx.md
+  ```
 
   [1]: https://pre-commit.com/
   [2]: https://pre-commit.com/hooks.html
+  [3]: https://github.com/markdownlint/markdownlint/blob/main/.mdl_style.rb
+  [4]: https://github.com/markdownlint/markdownlint/blob/main/docs/configuration.md#specifying-which-rules-mdl-processes
