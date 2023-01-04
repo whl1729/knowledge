@@ -9,6 +9,12 @@
 
 ## 安装 npm
 
+### npm 设置淘宝镜像
+
+```sh
+npm config set registry https://registry.npm.taobao.org
+```
+
 ### 解决 npm 全局安装没有权限的问题
 
 使用`npm install -g`全局安装 package 时，可能报以下错误：
