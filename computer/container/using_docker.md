@@ -1,5 +1,23 @@
 # docker 使用笔记
 
+## Dockerfile
+
+- `LABEL` 指令的一个用途：为中间镜像指定一个 LABEL，方便后面根据 LABEL 清理中间镜像。
+  - 举例，若在 Dockerfile 里面为中间镜像指定了 `LABEL stage=build`，
+    那么可以使用 `docker image prune --filter label=stage=build -f` 将其清除。
+
+## 常见问题
+
+- `docker pull` 报错：`access denied, repository does not exist or may require 'docker login'`
+  - 大概率是镜像地址填写有误。
+
+  ```bash
+  $ docker pull asdfgh
+  Using default tag: latest
+  Error response from daemon: pull access denied for asdfgh, repository does not exist or may require 'docker login':
+  denied: requested access to the resource is denied
+  ```
+
 - alpine 镜像中运行 elf 报错：`/bin/sh: /docker-gs-ping-roach: not found`
   - 使用 ldd 命令查看 elf 文件的依赖库，发现其中依赖 libc，而 alpine 不包含 libc，导致无法运行 elf。
   - 可以在 Dockerfile 里面增加 `apk add gcompat` 来安装 glibc。（参考[stack overflow][5]）
