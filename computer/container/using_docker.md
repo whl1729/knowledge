@@ -6,6 +6,18 @@
   - 举例，若在 Dockerfile 里面为中间镜像指定了 `LABEL stage=build`，
     那么可以使用 `docker image prune --filter label=stage=build -f` 将其清除。
 
+### Dockerfile 易忘命令
+
+- COPY
+  - `<dest>` 可以是容器内的绝对路径，也可以是相对于工作目录的相对路径（工作目录可以用 WORKDIR 指令来指定）。
+  - 目标路径不需要事先创建，如果目录不存在会在复制文件前先行创建缺失目录。
+  - 如果源路径为文件夹，复制的时候不是直接复制该文件夹，而是将文件夹中的内容复制到目标路径。
+
+  ```docker
+  COPY [--chown=<user>:<group>] <src>... <dest>
+  COPY [--chown=<user>:<group>] ["<src>",... "<dest>"]
+  ```
+
 ## 常见问题
 
 - `docker pull` 报错：`access denied, repository does not exist or may require 'docker login'`
