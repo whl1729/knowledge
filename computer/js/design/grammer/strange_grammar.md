@@ -11,6 +11,11 @@ let foo = [1, 2]
 [foo[0], foo[1]] = [foo[1], foo[0]]
 ```
 
+```javascript
+console.log('Hello world')
+(function () { console.log('Nice to meet you')})()
+```
+
 ## 类型
 
 ### 字面常量 vs 原始类型
