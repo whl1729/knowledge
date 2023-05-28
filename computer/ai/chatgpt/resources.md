@@ -5,9 +5,12 @@
 - [Prompt Engineering Guide][6]
 - [Brex's Prompt Engineering Guide][21]
 - [OpenAI Cookbook: Techniques to improve reliability][20]
+- [Lil'Log: Prompt Engineering][22]
+- [Learn Prompting][24]
 
 ## 视频
 
+- [Let's build GPT: from scratch, in code, spelled out][23]
 - [Prompt Engineering (by Andrew Ng and OpenAI)][9]
 - [大型语言模型的能力分析与应用 （by 邱锡鹏）][8]
 
@@ -61,3 +64,6 @@
   [19]: https://github.com/openai/openai-cookbook/tree/main
   [20]: https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md
   [21]: https://github.com/brexhq/prompt-engineering
+  [22]: https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
+  [23]: https://www.youtube.com/watch?v=kCc8FmEb1nY
+  [24]: https://learnprompting.org/docs/intro
