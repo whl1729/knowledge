@@ -1,17 +1,23 @@
 # ChatGPT 资源
 
+## Prompt Engineering
+
+- [Prompt Engineering Guide][6]
+- [Brex's Prompt Engineering Guide][21]
+- [OpenAI Cookbook: Techniques to improve reliability][20]
+
 ## 视频
 
 - [Prompt Engineering (by Andrew Ng and OpenAI)][9]
 - [大型语言模型的能力分析与应用 （by 邱锡鹏）][8]
 
-## 开源项目
+## 竞品
 
-- [Prompt Engineering Guide][6]
 - [chatglm-6b][5]
 
 ## 应用
 
+- [openai-cookbook][19]
 - [5个ChatGPT功能，帮助你提升日常编码效率][14]
 - [近期最火AutoGPT，来看怎么玩！][15]
 - [我问了鹅厂程序员：你们工作中怎么用ChatGPT？如何高效Prompt？][16]
@@ -52,3 +58,6 @@
   [16]: https://mp.weixin.qq.com/s?__biz=MzI2NDU4OTExOQ==&mid=2247606201&idx=1&sn=1128f7548c67d6153582a08c0649f63a&chksm=eaa945e9dddeccff179f63fbe7349dab0597ec3f26452fe26c3a136ed47e9c653afd0d902cfb&scene=21#wechat_redirect
   [17]: https://mp.weixin.qq.com/s?__biz=MzkxMzIzMDQ0NQ==&mid=2247484305&idx=1&sn=ed1c1799729dc46e8ad3653a43d90713&exportkey=n_ChQIAhIQh1xtDgKU3lgRAa6NW1QwthKZAgIE97dBBAEAAAAAAO8%2FJOe5C0wAAAAOpnltbLcz9gKNyK89dVj0ModWxppjv3ibWR%2BIMdNg3UHw5CVqzHEovgTIiWF1PLa4H0aYSomuY4f51h9fCnwrVOr3vAdOXLeS24nVacY%2FdB4an%2B2KsnNolY3nLpHVERmDkpune6YKa1IdZmjyVkKJ4L0vLJklHBpLbmmXLQwT%2Fhl11MUbfUbRBwWnySsbCO0Z9I6YZuqaA4kLSSTE6EYwGsNJbyIW6WESlWPF5BrgUbeH1cfGt%2Fa7cMCMbpaJOoRu8niRUOoLbU6RJTx6rj78uX4LlEsKp%2FMjdBrTFRYzcn3ml00J%2BPVpr4hUX6oAcQwsEHnXp%2BBQmrSWDTcoX4nM7BTf&acctmode=0&pass_ticket=brZVdOjVwYW6kZFr%2BIKJlYwfzDIZBe1rG0Z7wLl9MrBKs9WNPkBDW33YDneKq4txOBVYehBP9oCbHMxCPLHffA%3D%3D&wx_header=0
   [18]: https://mp.weixin.qq.com/s?__biz=MjM5MjAwODM4MA==&mid=2650969784&idx=2&sn=e718ea4a9eba20be94e1278ac78cf7ff&exportkey=n_ChQIAhIQNd18f2DEkE3FbEsNRXWxzBKZAgIE97dBBAEAAAAAAJ4zDdtpE%2BYAAAAOpnltbLcz9gKNyK89dVj0NX1Jc6REGnWf75tuFEBo95VDFQAlGSK%2BofI6ldq9ybNQzrZ2CSw8QYDrqW%2BG0Q8rfbhVylTwYyJChFPN7sJIFaUw3U%2BzrUPtGdm%2FX%2FqX%2BzNLsSPSqtTOONUB3nEbQGseWtJqwlOQEWoDqaDErl%2BGD1vQnkCjJgvW6CYNgrMIBbUAuwgpmwPJimkVmNXIiPHlx7o98ZTnNS4aHpRspyUFNo2W36L7FiB10HozW%2FSGAO%2BUdY7IcsZVHKAHLT0OXkV%2B%2Fg7WKOSZPaLfb9xNzwQIs%2ByxoYDbqqv3BtMMAddQiscIo2gjz8d77rfdMu%2BgxD1B26iC&acctmode=0&pass_ticket=brZVdOjVwYW6kZFr%2BIKJlYwfzDIZBe1rG0Z7wLl9MrD4fcrrnpCSyZlyckouCC0PJjtsiIR4VFmJvCQTHWTT8Q%3D%3D&wx_header=0
+  [19]: https://github.com/openai/openai-cookbook/tree/main
+  [20]: https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md
+  [21]: https://github.com/brexhq/prompt-engineering
