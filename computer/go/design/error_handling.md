@@ -24,7 +24,7 @@
   func Unwrap(err error) error
   ```
 
-## `github.com/pkg/erros`
+## `github.com/pkg/errors`
 
 - 相比标准库增加的功能
   - 支持错误信息多层封装
