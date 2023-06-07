@@ -13,6 +13,12 @@
   curl --remote-name http://example.com/filename
   ```
 
+- Upload a file
+
+  ```sh
+  curl -F "user=foo" -F "token=bar" -F "image=@/home/user1/Desktop/test.jpg" localhost/uploader.php
+  ```
+
 - Send form-encoded data (POST request of type application/x-www-form-urlencoded). Use --data @file_name or --data @'-' to read from STDIN:
 
   ```sh
