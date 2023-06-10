@@ -1,5 +1,19 @@
 # Python 使用笔记
 
+## Python 控制台
+
+- 返回字符串和打印字符串
+  - 返回字符串会有引号，打印字符串没有引号
+
+  ```python
+  >>> def foo(): return "foo"
+  >>> def bar(): print("bar")
+  >>> foo()
+  'foo'
+  >>> bar()
+  bar
+  ```
+
 ## 疑问
 
 - Python 设计问题：在一个类里面使用一个不依赖此类的函数时，应该怎么定义它？
