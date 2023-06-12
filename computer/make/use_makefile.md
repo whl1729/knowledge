@@ -1,5 +1,16 @@
 # Makefile 使用笔记
 
+- 在 Makefile 使用 shell 变量
+  - Makefile 默认 shell 为 `/bin/sh`，因此不能直接使用 bash 语法。比如变量赋值不支持 `$` 展开。
+  - Makefile 的 target 里面每行命令相互独立，如果后面的命令需要依赖前面定义的变量，需要合在同一行。
+  - Makefile 引用 shell 变量需要使用两个 `$`，因为一个 `$` 引用的是 make 变量，不是 shell 变量。
+
+  ```make
+  target:
+    today=`date +%y-%m-%d`; \
+    echo $${today};
+  ```
+
 - 获取 Makefile 所在的目录绝对路径
 
   ```makefile
