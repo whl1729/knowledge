@@ -1,7 +1,7 @@
 # 如何命名
 
 > 「名不正则言不顺，言不顺则事不成。」 ——孔子
-
+>
 > 「There are only two hard things in Computer Science: cache invalidation and naming things.」 —— Phil Karlton
 
 在编程中，命名是非常重要的一件事情，直接影响代码的可读性。
