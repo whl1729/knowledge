@@ -1,5 +1,5 @@
 import argparse
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description="what the program does")
 # add a positional integer argument
 parser.add_argument("square", type=int,
                     help="display a square of a given number")
@@ -13,3 +13,6 @@ parser.add_argument("-p", "--port", type=int, default=8080,
 parser.add_argument("-n", "--name",
                     help="host name of the server")
 args = parser.parse_args()
+
+
+# Reference: https://docs.python.org/3/library/argparse.html
