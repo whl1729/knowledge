@@ -1,5 +1,12 @@
 # MySQL 使用笔记
 
+## FAQs
+
+- Solve the error when connect mysqld: `ERROR 2026 (HY000): SSL connection error: unknown error number`
+  - add `--ssl-mode=DISABLED` option. E.g. `mysql -h 172.31.0.2 -P 3401 -u maker-test -p --ssl-mode=DISABLED maker-test`
+
+- When connecting to mysqld with non-default port, the host is required.
+
 ## Basic Knowledge
 
 ### Data Type
