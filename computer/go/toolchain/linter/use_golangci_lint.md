@@ -1,6 +1,7 @@
 # golangci-lint 使用笔记
 
 - 使用 golangci-lint 前必须配置环境变量 `GOPATH`，否则报以下错误：
+  - 对于 go v1.18，配置 `GO111MODULE=off` 也能解决问题。
 
   ```bash
   # go v1.17 环境下报错：
