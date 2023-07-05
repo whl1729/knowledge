@@ -1,5 +1,18 @@
 # Nginx 使用笔记
 
+## 配置 Nginx
+
+- 将 http 请求重定向到 https
+  - 这种配置方法可以将所有 method 都重定向
+
+  ```text
+  server {
+    listen 80;
+    server_name pa-test.minieye.tech;
+    return 301 https://$host$1;
+  }
+  ```
+
 ## 安装 Nginx
 
 按照[官方安装教程][1]进行安装即可。
