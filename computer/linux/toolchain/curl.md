@@ -1,5 +1,7 @@
 # curl 使用指南
 
+- curl 发带有参数的 GET 请求时，需要将 url 部分用单/双引号括起来，否则无法正常传递参数。
+
 - Download the contents of a URL to a file:
 
   ```sh
