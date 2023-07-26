@@ -8,8 +8,12 @@ The user settings are read from the ~/.config/flake8 file (or the ~/.flake8 file
 [flake8]
 ignore = E226,E302,E41
 max-line-length = 160
-exclude = tests/*
 max-complexity = 10
+exclude =
+    __init__.py
+    minican/*.py
+    minican/interfaces/*.py
+    minican/interfaces/**/*.py
 ```
 
 ## settings
