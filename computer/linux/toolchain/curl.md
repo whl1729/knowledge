@@ -1,5 +1,18 @@
 # curl 使用指南
 
+- [Timing With Curl][1]
+
+  ```sh
+  curl -L -w "time_namelookup: %{time_namelookup}
+  time_connect: %{time_connect}
+  time_appconnect: %{time_appconnect}
+  time_pretransfer: %{time_pretransfer}
+  time_redirect: %{time_redirect}
+  time_starttransfer: %{time_starttransfer}
+  time_total: %{time_total}
+  " https://example.com/
+  ```
+
 - curl 发带有参数的 GET 请求时，需要将 url 部分用单/双引号括起来，否则无法正常传递参数。
 
 - Download the contents of a URL to a file:
@@ -56,3 +69,5 @@
   # -k, --insecure
   curl -E client.pem --key key.pem -k https://example.com
   ```
+
+  [1]: https://susam.net/blog/timing-with-curl.html
