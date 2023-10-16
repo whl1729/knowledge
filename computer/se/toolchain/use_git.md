@@ -1,5 +1,11 @@
 # Git 使用笔记
 
+- Unset a global proxy
+
+  ```bash
+  git config --global --unset http.proxy
+  ```
+
 - Show change diffs of some file on another branch
 
   ```bash
