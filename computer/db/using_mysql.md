@@ -2,6 +2,30 @@
 
 ## FAQs
 
+- [解决 MYSQL 命令行界面中文乱码的问题][6]
+  - 在 MYSQL 命令行界面，输入 `show variables like "%char%";` 查看默认编码格式。若前三行不是 `utf8`，则说明编码格式不对。
+  - 使用 `set names utf8` 或 `set character set utf8` 来修改默认编码格式为 `utf8`，即可
+
+- Create a database whose name has a dash: Use 反引号
+
+  ```sql
+  CREATE DATABASE `my-database`;
+  ```
+
+- Restore MySQL from a backup file
+  - Create a database in your host
+  - Rstore MySQL backup:
+
+  ```sh
+  mysql -u [user] -p [database_name] < [filename].sql
+  ```
+
+- Back up MySQL data running in a Docker container
+
+  ```sh
+  mysqldump -h 127.0.0.1 -P [EXPOSED_PORT] -u [USERNAME] -p[PASSWORD] [DATABASE_NAME] > backup.sql
+  ```
+
 - Solve the error when connecting mysqld: `ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)`
   - add `--protocol=tcp` option.
 
@@ -301,3 +325,4 @@
   [3]: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
   [4]: https://dev.mysql.com/doc/refman/8.0/en/mysqlimport.html
   [5]: https://dev.mysql.com/doc/refman/8.0/en/counting-rows.html
+  [6]: https://developer.aliyun.com/article/49712
