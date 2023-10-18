@@ -3,6 +3,9 @@
 - Install Docker Desktop on Windows 10
   - Install WSL and Ubuntu
 
+> 一开始我先安装 Docker Desktop，后安装 WSL 和 Ubuntu，结果 Ubuntu 无法正常使用 docker 命令。
+> 后来卸载重装 Docker Desktop，问题解决。因此，应该先安装 WSL 再 Docker Desktop。
+
 - Install WSL on Windows 10
   - Install Ubuntu from Windows store
   - Enable Virtualization in BIOS
