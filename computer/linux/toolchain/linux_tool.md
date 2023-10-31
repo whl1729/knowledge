@@ -16,4 +16,40 @@
 
   ![Linux Performance Tools](images/linux_perf_tools_full.png)
 
+## CD Command Hacks
+
+- [CDPATH: 为 cd 命令定义基础目录][3]
+
+  ```sh
+  export CDPATH=.:~:/etc:/var
+  ```
+
+- Use cd alias to navigate up the directory effectively
+
+  ```sh
+  alias ..="cd .."
+  alias ...="cd ../.."
+  alias ....="cd ../../.."
+  alias .....="cd ../../../.."
+  alias ......="cd ../../../../.."
+  ```
+
+- Perform mkdir and cd using a single command
+
+  ```sh
+  function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+  ```
+
+- Automatically correct mistyped directory names on cd
+
+  ```sh
+  shopt -s cdspell
+  ```
+
+## 参考资料
+
+- [Linux 101 Hacks][2]
+
   [1]: https://github.com/tldr-pages/tldr
+  [2]: https://linux.101hacks.com/toc/
+  [3]: https://linux.101hacks.com/cd-command/cdpath/
