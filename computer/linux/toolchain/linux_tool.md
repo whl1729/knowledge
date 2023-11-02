@@ -1,5 +1,15 @@
 # Linux 实用工具
 
+- find
+
+  ```sh
+  find / -type f -size +100M
+  find . -mtime +60
+  find . –mtime -2
+  find / -type f -name *.tar.gz -size +100M -exec rm -f {} \;
+  find . -type f -name "index.md" -execdir mv {} README.md \;
+  ```
+
 - [paste]: merge lines of file
 
   ```sh
