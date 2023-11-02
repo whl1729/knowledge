@@ -1,5 +1,7 @@
 # docker 使用笔记
 
+- 查看镜像日志：`docker logs <container-name>`
+
 ## Dockerfile
 
 - `LABEL` 指令的一个用途：为中间镜像指定一个 LABEL，方便后面根据 LABEL 清理中间镜像。
