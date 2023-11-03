@@ -1,5 +1,9 @@
 # bash 使用笔记
 
+- Background the ssh client
+  - Use `Enter` + `~` + `Ctrl+Z` to return to the parent shell
+  - Use `fg` to go back to the ssh client
+
 ## bash 基础配置
 
 ```bash
