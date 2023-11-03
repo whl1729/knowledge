@@ -1,5 +1,17 @@
 # apt 使用笔记
 
+## Use mirror
+
+1. 先将 `/etc/apt/sources.list` 备份
+2. 备份后，将此文件里面的所有`archive.ubuntu.com` 和 `security.ubuntu.com` 均替换为以下任一镜像。
+
+```text
+http://mirrors.aliyun.com/ubuntu/
+https://mirrors.tuna.tsinghua.edu.cn/ubuntu/
+https://mirrors.ustc.edu.cn/ubuntu/
+http://mirrors.163.com/ubuntu/
+```
+
 ## Use a socks5 proxy for `apt` on Ubuntu 20.04 (by ChatGPT)
 
 To use a SOCKS proxy for `apt` on Ubuntu 20.04, you typically use a program like `tsocks` or `proxychains` to enforce the SOCKS proxy settings on `apt`.
