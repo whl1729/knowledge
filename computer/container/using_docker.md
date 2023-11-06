@@ -2,6 +2,12 @@
 
 - 查看镜像日志：`docker logs <container-name>`
 
+## docker compose
+
+- 环境变量文件
+  - 如果 `docker-compose.yml` 所在目录下含有 `.env` 文件，那么执行 `docker compose` 时会默认加载此文件
+  - 如果想修改加载的文件名，可以使用以下命令：`docker compose -f docker-compose.yml --env-file .env.test up`
+
 ## Dockerfile
 
 - `LABEL` 指令的一个用途：为中间镜像指定一个 LABEL，方便后面根据 LABEL 清理中间镜像。
