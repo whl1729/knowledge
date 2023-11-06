@@ -1,5 +1,11 @@
 # Linux 实用工具
 
+- sort
+
+  ```sh
+  sort -t: -u -k 3 names.txt
+  ```
+
 - find
 
   ```sh
