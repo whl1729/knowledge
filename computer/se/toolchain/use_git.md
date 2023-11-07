@@ -1,5 +1,11 @@
 # Git 使用笔记
 
+- Trace the evolution of a function
+
+  ```bash
+  git log -L "<funcname>:<file>"
+  ```
+
 - Unset a global proxy
 
   ```bash
