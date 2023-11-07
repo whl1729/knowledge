@@ -1,9 +1,16 @@
 # Linux 实用工具
 
+- cut
+
+  ```sh
+  cut -d: -f1,3 -s foo.txt
+  cut -c 1,8 foo.txt
+  ```
+
 - sort
 
   ```sh
-  sort -t: -u -k 3 names.txt
+  sort -t: -u -k 3 foo.txt
   ```
 
 - find
