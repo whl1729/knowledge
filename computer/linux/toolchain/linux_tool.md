@@ -1,5 +1,12 @@
 # Linux 实用工具
 
+- diff
+
+  ```sh
+  # -w: Ignore all whitespace
+  diff -w foo.txt foo_new.txt
+  ```
+
 - cut
 
   ```sh
