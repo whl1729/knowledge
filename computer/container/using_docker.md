@@ -4,6 +4,11 @@
 
 ## docker compose
 
+- 端口映射
+  - docker compose 的 ports 参数可以用来配置端口映射 `-${HOST_PORT}:${CONTAINER_PORT}`
+  - 但是需要注意，你配置的容器映射的端口，与你容器所运行的服务监听的端口，是两回事
+  - 举个例子，MySQL 容器，你配置了 `3411:3306`，同时环境变量 `MYSQL_TCP_PORT` 配置为 3411，那么该容器监听的端口是 3411
+
 - 环境变量文件
   - 如果 `docker-compose.yml` 所在目录下含有 `.env` 文件，那么执行 `docker compose` 时会默认加载此文件
   - 如果想修改加载的文件名，可以使用以下命令：`docker compose -f docker-compose.yml --env-file .env.test up`
