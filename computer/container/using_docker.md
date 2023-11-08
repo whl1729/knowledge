@@ -1,7 +1,20 @@
 # docker 使用笔记
 
+- `docker ps` 的一个注意事项
+  - 输出结果中的 `PORTS` 有时会出现一些非映射的独立端口，实测发现它们代表容器服务的默认监听端口，而非真正监听端口
+  - 比如，此时此刻我的电脑上的 `docker ps` 输出结果如下所示，我的容器里的 MongoDB 监听在 27027 端口，但这里也会显示 27017 端口
+
+  ```sh
+  $ docker ps
+  CONTAINER ID   IMAGE                                     COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+  bb29d9f12f67   maker:test                                "bash -c 'while true…"   21 minutes ago   Up 21 minutes   0.0.0.0:8093->8093/tcp                        maker-test
+  4441d5d1631f   mysql:8.0-debian                          "docker-entrypoint.s…"   21 minutes ago   Up 21 minutes   3306/tcp, 33060/tcp, 0.0.0.0:3411->3411/tcp   maker-mysql-test
+  53473d0e6b58   mongodb/mongodb-community-server:latest   "python3 /usr/local/…"   21 minutes ago   Up 21 minutes   27017/tcp, 0.0.0.0:27027->27027/tcp           maker-mongo-test
+  ```
+
 - 以 root 用户运行命令
   - `docker exec -u root container_name mycmd`
+
 - 查看镜像日志：`docker logs <container-name>`
 
 ## docker compose
