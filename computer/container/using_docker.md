@@ -1,5 +1,7 @@
 # docker 使用笔记
 
+- 以 root 用户运行命令
+  - `docker exec -u root container_name mycmd`
 - 查看镜像日志：`docker logs <container-name>`
 
 ## docker compose
