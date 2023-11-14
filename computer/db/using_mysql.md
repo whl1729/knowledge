@@ -2,11 +2,26 @@
 
 ## FAQs
 
+- Rename a database
+  - Backup your database
+  - Export the SQL dump
+  - Create a new database
+  - Import the SQL dump into the new database
+
+  ```sh
+  mysqldump -u your_username -p your_old_database > old_database_dump.sql
+
+  # In MYSQL command-line tool
+  CREATE DATABASE your_new_database;
+
+  mysql -u your_username -p your_new_database < old_database_dump.sql
+  ```
+
 - [解决 MYSQL 命令行界面中文乱码的问题][6]
   - 在 MYSQL 命令行界面，输入 `show variables like "%char%";` 查看默认编码格式。若前三行不是 `utf8`，则说明编码格式不对。
   - 使用 `set names utf8` 或 `set character set utf8` 来修改默认编码格式为 `utf8`，即可
 
-- Create a database whose name has a dash: Use 反引号
+- Create a database whose name has a dash: 使用反引号
 
   ```sql
   CREATE DATABASE `my-database`;
@@ -103,6 +118,12 @@
 
   ```sql
   USE db_name;
+  ```
+
+- 删除数据库
+
+  ```sql
+  DROP DATABASE db_name;
   ```
 
 ### Table
