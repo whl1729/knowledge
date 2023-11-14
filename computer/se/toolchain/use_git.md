@@ -1,5 +1,25 @@
 # Git 使用笔记
 
+- Rename a git tag
+
+  ```bash
+  git tag new old           # Create a new local tag named `new` from tag `old`.
+  git tag -d old            # Delete local tag `old`.
+  git push origin new :old  # Push `new` to your remote named "origin", and delete
+                            #     tag `old` on origin (by pushing an empty tag
+                            #     name to it).
+  ```
+
+- Delete a git tag
+
+  ```bash
+  # You can push an 'empty' reference to the remote tag name:
+  git push origin :tagname
+
+  # Or, more expressively, use the --delete option (or -d if your git version is older than 1.8.0):
+  git push --delete origin tagname
+  ```
+
 - Trace the evolution of a function
 
   ```bash
