@@ -12,6 +12,7 @@
   # 国内网络安装 Python 速度较慢，有 VPN 的话可以使用 proxychains，即
   # sudo proxychains apt install python3.11
   sudo apt install python3.11
+  sudo apt install python3.11-dev
   python3.11 --version
 
   sudo apt install python-is-python3
