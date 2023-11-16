@@ -1,5 +1,30 @@
 # Python 使用笔记
 
+## 安装
+
+- 在 Ubuntu 20.04 安装 Python 3.11
+
+  ```sh
+  sudo apt update
+  sudo add-apt-repository ppa:deadsnakes/ppa -y
+  sudo apt update
+
+  # 国内网络安装 Python 速度较慢，有 VPN 的话可以使用 proxychains，即
+  # sudo proxychains apt install python3.11
+  sudo apt install python3.11
+  python3.11 --version
+
+  sudo apt install python-is-python3
+  ```
+
+- 修改 Ubuntu 环境下默认的 Python 版本
+
+  ```sh
+  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 2
+  sudo update-alternatives --config python
+  ```
+
 ## Python 控制台
 
 - 返回字符串和打印字符串
@@ -32,7 +57,7 @@
 > 但在实际使用时，为了能够正确从二进制流中分隔字符（也就是「解码」），需要先进行「编码」，否则将无法区分不同长度的字符。
 > utf-8 就是一种编码/解码的方式。
 
-## Python 版本管理器
+## Python 虚拟环境
 
 - Tell Ubuntu that python is python3
 
