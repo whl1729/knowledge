@@ -1,5 +1,13 @@
 # Linux 实用工具
 
+- type
+  - Tell you about aliases, functions, builtins
+
+  ```sh
+  $ type ls
+  ls is aliased to `ls --color=auto'
+  ```
+
 - diff
 
   ```sh
