@@ -1,5 +1,25 @@
 # Linux 实用工具
 
+- lsof: ls open files
+
+  ```sh
+  lsof | less
+  lsof /usr/bin/bash
+  ```
+
+- less
+  - Scroll Down: Use the Spacebar to scroll down one page at a time.
+  - Scroll Up: Press b to scroll up one page at a time.
+  - Scroll Line by Line: Use the Enter key to scroll down one line at a time.
+  - Scroll Backward: Press u to scroll backward one-half page at a time.
+  - Search Forward: Press / and enter the search term. Use n to find the next occurrence.
+  - Search Backward: Press ? and enter the search term. Use N to find the previous occurrence.
+  - Jumping to a Specific Line: Press : to bring up the prompt at the bottom, then enter the line number and press Enter.
+
+  ```sh
+  less filename
+  ```
+
 - type
   - Tell you about aliases, functions, builtins
 
