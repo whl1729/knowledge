@@ -1,5 +1,12 @@
 # Linux 实用工具
 
+- ls
+
+  ```sh
+  # 查看当前目录下的所有子目录
+  ls -d */
+  ```
+
 - lsof: ls open files
 
   ```sh
