@@ -1,5 +1,11 @@
 # sed 使用笔记
 
+- 执行多个操作
+
+  ```sh
+  sed -n -e '/^root/p' -e '/^along/p' /etc/passwd
+  ```
+
 - 打印某个文件的某几行
 
   ```sh
