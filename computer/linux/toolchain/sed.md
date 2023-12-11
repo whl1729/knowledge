@@ -1,5 +1,14 @@
 # sed 使用笔记
 
+- sed 正则表达式：`\+,\?, \{n\}, \b`
+
+  ```sh
+  sed -n '/log: \+/ p' log.txt
+  sed -n '/log: \?/ p' log.txt
+  sed -n '/[0-9]\{5\}/ p' log.txt
+  sed -n '/\bthe\b/ p' words.txt
+  ```
+
 - GNU sed 专有的替换标识：`\l, \L, \u, \U, \E`
 
   ```sh
