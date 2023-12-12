@@ -1,5 +1,25 @@
 # sed 使用笔记
 
+- 附加命令：a, i, c
+
+  ```sh
+  # 在 log.txt 第2行下面添加一行内容
+  sed '2 a hello world' log.txt
+
+  # 在 log.txt 第2行上面添加一行内容
+  sed '2 i hello world' log.txt
+
+  # 将 log.txt 第2行修改为 hello world
+  sed '2 c hello world' log.txt
+  ```
+
+- 备份文件再原地修改
+
+  ```sh
+  # 先备份 employee.txt 为 employee.txt.bak，再原地修改 employee.txt
+  sed -i.bak 's/John/Johnny/g' employee.txt
+  ```
+
 - sed 正则表达式：`\+,\?, \{n\}, \b`
 
   ```sh
