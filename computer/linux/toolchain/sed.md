@@ -1,5 +1,23 @@
 # sed 使用笔记
 
+- 执行多个命令：用大括号括起来，各命令之间用分号隔开
+
+  ```sh
+  sed -e "{s/John/Johnny/; s/Jane/Janny/}" employee.txt
+  ```
+
+- 显示每一行的行号
+
+  ```sh
+  sed -e "=" employee.txt | sed '{N;s/\n/ /}'
+  ```
+
+- 读取下一行并附加到模式空间
+
+  ```sh
+  sed -e '{N;s/\n/:/}' empnametitle.txt
+  ```
+
 - 附加命令：a, i, c
 
   ```sh
