@@ -1,5 +1,35 @@
 # sed 使用笔记
 
+- 把保持空间的内容追加到模式空间（先加上换行符再追加）：命令G
+
+  ```sh
+  sed -n -e '/Manager/!h' -e '/Manager/{x;G;s/\n/:/;p}' empnametitle.txt
+  ```
+
+- 把保持空间的内容复制到模式空间：命令g（get）
+
+  ```sh
+  sed -n -e '/Manager/!h' -e '/Manager/{g;p}' empnametitle.txt
+  ```
+
+- 把模式空间的内容追加到保持空间（先加上换行符再追加）：命令H
+
+  ```sh
+  sed -n -e '/Manager/!h' -e '/Manager/{H;x;p}' empnametitle.txt
+  ```
+
+- 把模式空间的内容复制到保持空间：命令h（hold）
+
+  ```sh
+  sed -n -e '/Manager/!h' -e '/Manager/{x;p}' empnametitle.txt
+  ```
+
+- 用保持空间替换模式空间：命令x (exchange)
+
+  ```sh
+  sed -n -e '{x;n}' -e '/Manager/{x;p}' empnametitle.txt
+  ```
+
 - 执行多个命令：用大括号括起来，各命令之间用分号隔开
 
   ```sh
