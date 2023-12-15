@@ -1,5 +1,17 @@
 # sed 使用笔记
 
+- 打印多行模式中的第一行：命令P
+
+  ```sh
+  sed -n -e 'N' -e '/Manager/P' empnametitle.txt
+  ```
+
+- 读取下一行并附加到模式空间
+
+  ```sh
+  sed -e '{N;s/\n/:/}' empnametitle.txt
+  ```
+
 - 把保持空间的内容追加到模式空间（先加上换行符再追加）：命令G
 
   ```sh
@@ -40,12 +52,6 @@
 
   ```sh
   sed -e "=" employee.txt | sed '{N;s/\n/ /}'
-  ```
-
-- 读取下一行并附加到模式空间
-
-  ```sh
-  sed -e '{N;s/\n/:/}' empnametitle.txt
   ```
 
 - 附加命令：a, i, c
