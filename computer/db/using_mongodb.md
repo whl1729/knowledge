@@ -1,5 +1,39 @@
 # MongoDB 使用笔记
 
+## FAQs
+
+### Q1: `An object representing an expression must have exactly one field`
+
+使用 MongoDB 定义一个 pipeline 时，抛出以下错误：
+
+```text
+(Location15983) An object representing an expression must have exactly one field: { $year: { $dateFromString: { dateString: \"$startTime\", format: \"%Y-%m-%d %H:%M:%S\" } }, station: \"$station\" }"}
+```
+
+对应的代码如下：
+
+```go
+"_id": bson.M{
+            "$year": bson.M{
+                "$dateFromString": bson.M{"dateString": "$startTime", "format": "%Y-%m-%d %H:%M:%S"},
+            },
+            "station": "$station",
+        },
+```
+
+修改后的代码如下：
+
+```go
+"_id": bson.M{
+            "year": bson.M{
+                groupID: bson.M{
+                    "$dateFromString": bson.M{"dateString": "$startTime", "format": "%Y-%m-%d %H:%M:%S"},
+                },
+            },
+            "station": "$station",
+        },
+```
+
 ## Aggregation
 
 - 通过 `$let` 来访问同一个 pipeline stage 中定义的变量
