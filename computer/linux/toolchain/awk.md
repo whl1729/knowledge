@@ -1,5 +1,11 @@
 # awk 使用笔记
 
+- awk 分隔符：FS、OFS、RS、ORS
+
+  ```sh
+  awk 'BEGIN {RS="-\n"; FS=","; ORS="\n---\n"; OFS=":";} {print $2, $3}' employee.txt
+  ```
+
 - awk 程序结构区域（BEGIN，body，END）
   - BEGIN 和 END 必须大写
   - BEGIN 和 END 区域的命令均只执行一次
