@@ -1,38 +1,12 @@
 # MongoDB 使用笔记
 
-## FAQs
+## 查询数据库
 
-### Q1: `An object representing an expression must have exactly one field`
+- Mongosh select 部分字段
 
-使用 MongoDB 定义一个 pipeline 时，抛出以下错误：
-
-```text
-(Location15983) An object representing an expression must have exactly one field: { $year: { $dateFromString: { dateString: \"$startTime\", format: \"%Y-%m-%d %H:%M:%S\" } }, station: \"$station\" }"}
-```
-
-对应的代码如下：
-
-```go
-"_id": bson.M{
-            "$year": bson.M{
-                "$dateFromString": bson.M{"dateString": "$startTime", "format": "%Y-%m-%d %H:%M:%S"},
-            },
-            "station": "$station",
-        },
-```
-
-修改后的代码如下：
-
-```go
-"_id": bson.M{
-            "year": bson.M{
-                groupID: bson.M{
-                    "$dateFromString": bson.M{"dateString": "$startTime", "format": "%Y-%m-%d %H:%M:%S"},
-                },
-            },
-            "station": "$station",
-        },
-```
+    ```sh
+    db.testResult.find({"product": "D2H", "station": "PCBA测试"}, { product: 1, station: 1, deviceSN: 1, code: 1, startTime: 1})
+    ```
 
 ## Aggregation
 
@@ -87,4 +61,38 @@ mongorestore --port destPort --db destDB --collection destCollection /path/to/du
 ```sh
 use temp
 db.dropDatabase()
+```
+
+## FAQs
+
+### Q1: `An object representing an expression must have exactly one field`
+
+使用 MongoDB 定义一个 pipeline 时，抛出以下错误：
+
+```text
+(Location15983) An object representing an expression must have exactly one field: { $year: { $dateFromString: { dateString: \"$startTime\", format: \"%Y-%m-%d %H:%M:%S\" } }, station: \"$station\" }"}
+```
+
+对应的代码如下：
+
+```go
+"_id": bson.M{
+            "$year": bson.M{
+                "$dateFromString": bson.M{"dateString": "$startTime", "format": "%Y-%m-%d %H:%M:%S"},
+            },
+            "station": "$station",
+        },
+```
+
+修改后的代码如下：
+
+```go
+"_id": bson.M{
+            "year": bson.M{
+                groupID: bson.M{
+                    "$dateFromString": bson.M{"dateString": "$startTime", "format": "%Y-%m-%d %H:%M:%S"},
+                },
+            },
+            "station": "$station",
+        },
 ```
