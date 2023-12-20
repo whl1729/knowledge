@@ -1,5 +1,11 @@
 # awk 使用笔记
 
+- awk 内置函数
+
+  ```sh
+  awk 'BEGIN {print log(10); print sqrt(20); print cos(30)}'
+  ```
+
 - awk 操作符
   - 字符串操作符：（空格）是连接字符串的操作符
   - 比较操作符
