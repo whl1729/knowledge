@@ -1,5 +1,7 @@
 # Linux 实用工具
 
+- [atop][4]
+
 - ls
 
   ```sh
@@ -118,3 +120,4 @@
   [1]: https://github.com/tldr-pages/tldr
   [2]: https://linux.101hacks.com/toc/
   [3]: https://linux.101hacks.com/cd-command/cdpath/
+  [4]: https://help.aliyun.com/zh/ecs/how-to-use-the-linux-system-atop-monitoring-tools/
