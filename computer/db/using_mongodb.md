@@ -96,3 +96,17 @@ db.dropDatabase()
             "station": "$station",
         },
 ```
+
+### Q2: 为什么 MongoDB 使用那么多内存
+
+根据[官方文档][1]，MongoDB 的内存使用策略如下：
+
+> With WiredTiger, MongoDB utilizes both the WiredTiger internal cache and the filesystem cache.
+>
+> Starting in MongoDB 3.4, the default WiredTiger internal cache size is the larger of either:
+>
+> 50% of (RAM - 1 GB), or
+>
+> 256 MB.
+
+  [1]: https://www.mongodb.com/docs/manual/core/wiredtiger/
