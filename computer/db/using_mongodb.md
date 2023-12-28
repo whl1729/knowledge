@@ -109,4 +109,16 @@ db.dropDatabase()
 >
 > 256 MB.
 
+调整方法：可以修改 MongoDB 的配置文件或修改 mongod 命令选项。
+
+- [修改 mongod 命令选项][2]
+  - `--wiredTigerCacheSizeGB <float>`
+  - Values can range from 0.25 GB to 10000 GB
+  - Defines the maximum size of the internal cache that WiredTiger uses for all data. The memory consumed by an index build (see maxIndexBuildMemoryUsageMegabytes) is separate from the WiredTiger cache memory.
+
+- [修改 MongoDB 配置文件][3]
+  - 修改 `/etc/mongod.conf` 的 `storage.wiredTiger.engineConfig.cacheSizeG` 参数，取值范围为 0.25 ~ 10000.
+
   [1]: https://www.mongodb.com/docs/manual/core/wiredtiger/
+  [2]: https://www.mongodb.com/docs/manual/reference/program/mongod/#std-option-mongod.--wiredTigerCacheSizeGB
+  [3]: https://www.mongodb.com/docs/manual/reference/configuration-options/#mongodb-setting-storage.wiredTiger.engineConfig.cacheSizeGB
