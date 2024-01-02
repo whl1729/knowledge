@@ -1,5 +1,11 @@
 # awk 使用笔记
 
+- awk 使用 Shell 变量
+
+  ```sh
+  awk -v a="$var1" -v b="$var2" 'BEGIN {print a,b}'
+  ```
+
 - awk 内置函数
 
   ```sh
