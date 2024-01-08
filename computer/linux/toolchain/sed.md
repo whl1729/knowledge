@@ -1,5 +1,11 @@
 # sed 使用笔记
 
+- 在模式空间中使用 Shell 变量（用双引号括起来即可）
+
+  ```sh
+  sed -n "/$var1/,/$var2/p" empnametitle.txt
+  ```
+
 - 打印多行模式中的第一行：命令P
 
   ```sh
