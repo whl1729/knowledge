@@ -1,5 +1,16 @@
 # awk 使用笔记
 
+- awk 打印多个目标片段
+  - 当 action 用大括号括起来时，后面不需要加分号
+  - 当没有 action，而紧跟着是一个新的 pattern 时，需要加分号来区分前后两个语句（如下面的 `flag;`）
+
+  ```sh
+  # 包含边界
+  awk '/foo/ {flag=1} flag; /bar/ {flag=0}' file
+  # 不包含边界
+  awk '/foo/ {flag=1; next} /bar/ {flag=0} flag' file
+  ```
+
 - awk 使用 Shell 变量
 
   ```sh
