@@ -4,6 +4,7 @@
 
   ```sh
   awk -v a="$var1" -v b="$var2" 'BEGIN {print a,b}'
+  awk -v a="$var1" '$0~a' file
   ```
 
 - awk 内置函数
