@@ -34,12 +34,14 @@
   awk -F ',' '$5 <= 5' items.txt
   awk -F "," '$2 ~ "Tennis"' items.txt
   awk -F "," '$2 !~ "Tennis"' items.txt
+  awk -F ':' '$NF ~ /\/bin\/bash/' /etc/passwd
   ```
 
 - awk 内置变量
   - NR: Number of the Record
   - FILENAME
-  - FNR: Number of the Record in current File
+  - FNR: Number of the Record in the current File
+  - NF: Number of fileds in the current input record, so `$NF` represents the last field
 
   ```sh
   awk '{printf "FILENAME=%s  NR=%d  FNR=%d", FILENAME, NR, FNR"}' foo.txt bar.txt
