@@ -79,9 +79,26 @@
 - Physically Based Rendering: From Theory to Implementation
 - Real-Time Rendering, 4th Edition
 
-### OpenGL
+### 光线追踪
 
-- OpenGL Programming Guide （红书）
+- Ray Tracing in One Weekend
+
+### 物理仿真和动画
+
+- Foundations of Physically Based Modeling and Animation
+
+### OpenGL / WebGL
+
+- OpenGL Programming Guide （红宝书）
+- OpenGL SuperBible （蓝宝书）
+- OpenGL Shading Language (橙宝书）
+- WebGL Beginner's Guide
+- WebGL Programming Guide: Interactive 3D Graphics Programming with WebGL
+- Professional WebGL Programming: Developing 3D Graphics for the Web
+
+### 计算几何
+
+- Polygon Mesh Processing
 
 ### 数学
 
@@ -96,14 +113,3 @@
 - Game Physics
 - Fluid Simulation for Computer Graphics
 
-### 光线追踪
-
-- Ray Tracing in One Weekend
-
-### 物理仿真和动画
-
-- Foundations of Physically Based Modeling and Animation
-
-### 计算几何
-
-- Polygon Mesh Processing
