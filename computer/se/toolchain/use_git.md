@@ -1,5 +1,12 @@
 # Git 使用笔记
 
+- Show only date and commit message of logs
+  - [git log documentation][1]
+
+  ```bash
+  git log --pretty=format:"%cs %s"
+  ```
+
 - Rename a git tag
 
   ```bash
@@ -71,3 +78,6 @@
   git config --global alias.re 'remote'
   git config --global alias.st 'status'
   ```
+
+  [1]: https://git-scm.com/docs/git-log
+
