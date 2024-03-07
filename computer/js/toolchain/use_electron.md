@@ -1,5 +1,12 @@
 # Electron 使用笔记
 
+- 设置镜像
+
+  ```text
+  electron_mirror=https://npmmirror.com/mirrors/electron/
+  electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron_builder_binaries_mirror/
+  ```
+
 - `Uncaught ReferenceError: require is not defined` [解决方案][1]
 
   ```javascript
