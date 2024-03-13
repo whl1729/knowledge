@@ -2,6 +2,18 @@
 
 ## 查询数据库
 
+- Mongosh 筛选数组长度
+
+    ```sh
+    db.testResult.find({tasks: {$size: 2}})
+    ```
+
+- Mongosh 只显示数组中特定位置的元素的特定字段
+
+    ```sh
+    db.testResult.find({}, {"tasks": {$arrayElemAt: ["$tasks.data", 5]}})
+    ```
+
 - Mongosh select 部分字段
 
     ```sh
