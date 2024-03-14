@@ -1,5 +1,18 @@
 # Git 使用笔记
 
+- Show all authors
+
+  ```bash
+  # show all users & emails, and the number of commits in the CURRENT branch:
+  git shortlog --summary --numbered --email
+
+  # Or simply:
+  git shortlog -sne
+
+  # To show users from all branches you have to add --all flag:
+  git shortlog -sne --all
+  ```
+
 - Show only date and commit message of logs
   - [git log documentation][1]
 
