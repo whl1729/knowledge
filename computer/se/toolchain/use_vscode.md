@@ -2,6 +2,7 @@
 
 ## 快捷键
 
+- `Ctrl + \`: comment and uncomment code
 - `F4`: next search result
 - `Shift` + `F4`: previous search result
 
