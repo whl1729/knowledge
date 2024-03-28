@@ -77,6 +77,8 @@
   find . –mtime -2
   find / -type f -name *.tar.gz -size +100M -exec rm -f {} \;
   find . -type f -name "index.md" -execdir mv {} README.md \;
+  # find 过滤多个目录
+  find . -name "*.py" -not -path "./venv3.7.9/*" -not -path "./python-can-4.0.0/*"
   ```
 
 - [paste]: merge lines of file
