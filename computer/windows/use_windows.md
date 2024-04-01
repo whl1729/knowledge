@@ -1,5 +1,9 @@
 # Windows 系统使用笔记
 
+- [Running curl via powershell][1]
+  - Use `curl.exe` instead of `curl`
+  - In PowerShell `curl` is a built in alias to `Invoke-WebRequest` cmdlet
+
 - Install Docker Desktop on Windows 10
   - Install WSL and Ubuntu
 
@@ -25,3 +29,4 @@ wmic process where "name like '%python.exe%'" get ProcessId,ExecutablePath,Comma
 - 解决 git bash 中文乱码的问题
   - 修改「设置」-「Git bash」-「命令行」，在后面加上 `--login -i` 的选项，然后「保存」即可。
 
+  [1]: https://stackoverflow.com/questions/30807318/running-curl-via-powershell-how-to-construct-arguments
