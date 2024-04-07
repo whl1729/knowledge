@@ -8,7 +8,8 @@
   ```
 
   - 全局持续使用清华源
-    - 在 `~/.pip/pip.conf` 文件中新增以下配置
+    - 方法1：`pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`
+    - 方法2：在 `~/.pip/pip.conf` 文件中新增以下配置
   
   ```conf
   [global]
