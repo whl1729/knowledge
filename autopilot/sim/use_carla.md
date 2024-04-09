@@ -12,5 +12,10 @@
   - [Microsoft Visual C++ Runtime][2]
   - DirectX Runtime
 
-    [1]: https://carla.readthedocs.io/en/latest/start_quickstart/
-    [2]: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022
+## 参考资料
+
+- [小飞自动驾驶系列分享][3]
+
+  [1]: https://carla.readthedocs.io/en/latest/start_quickstart/
+  [2]: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022
+  [3]: https://www.zhihu.com/column/c_1324712096148516864
