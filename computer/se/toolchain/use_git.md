@@ -1,5 +1,10 @@
 # Git 使用笔记
 
+- Git staging area
+  - The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
+  - Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.
+  - 伍注：Git 暂存区对应的文件为 `.git/index`
+
 - Show all authors
 
   ```bash
