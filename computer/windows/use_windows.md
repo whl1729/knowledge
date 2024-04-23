@@ -1,5 +1,10 @@
 # Windows 系统使用笔记
 
+- Windows 安装和配置 OpenSSH 服务器
+  - [适用于 Windows 的 OpenSSH 入门][2]
+  - [Setting up OpenSSH for Windows using public key authentication][3]
+  - [为 Windows 中的 OpenSSH 配置默认 shell][4]
+
 - [Running curl via powershell][1]
   - Use `curl.exe` instead of `curl`
   - In PowerShell `curl` is a built in alias to `Invoke-WebRequest` cmdlet
@@ -30,3 +35,6 @@ wmic process where "name like '%python.exe%'" get ProcessId,ExecutablePath,Comma
   - 修改「设置」-「Git bash」-「命令行」，在后面加上 `--login -i` 的选项，然后「保存」即可。
 
   [1]: https://stackoverflow.com/questions/30807318/running-curl-via-powershell-how-to-construct-arguments
+  [2]: https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui
+  [3]: https://stackoverflow.com/a/50502015/11467929
+  [4]: https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_server_configuration#configuring-the-default-shell-for-openssh-in-windows
