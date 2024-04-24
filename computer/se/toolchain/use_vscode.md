@@ -8,6 +8,19 @@
 
 ## FAQs
 
+- [解决 vscode 无法解析 Python import 的模块的问题][3]
+
+  ```json
+  {
+    "python.autoComplete.extraPaths": [
+        "C:\\py3\\lib\\site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "C:\\py3\\lib\\site-packages"
+    ],
+  }
+  ```
+
 - [解决 vscode SSH 连接远端设备时一直卡在 Setting up SSH Host back: Downloading VS Code Server 的问题][1]
   - On server, get the commit id
 
@@ -41,3 +54,4 @@
 
   [1]: https://stackoverflow.com/a/56781109
   [2]: https://stackoverflow.com/a/66281531
+  [3]: https://stackoverflow.com/a/57669739/11467929
