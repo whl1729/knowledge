@@ -1,5 +1,17 @@
 # Git 使用笔记
 
+- Git 设置本地分支与远端分支的映射关系
+
+  ```sh
+  git branch -u origin/develop develop
+  ```
+
+- Git 查看本地分支与远端分支的映射关系
+
+  ```sh
+  git branch -vv
+  ```
+
 - [Git 设置使用 Beyond Compare 作为 diff 和 merge 工具][2]
 
   ```sh
