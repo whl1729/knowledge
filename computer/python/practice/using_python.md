@@ -20,7 +20,6 @@
   RUN python3.8 get-pip.py""
   ```
 
-
 - 在 Ubuntu 20.04 安装 Python 3.11
 
   ```sh
@@ -69,6 +68,13 @@
 - 为什么 pip install 新的包后，重新运行 pyinstaller 没有将其打包进去？
 
 ## Python 编码
+
+- 将中文写入 Python 文件
+
+  ```python
+  with open(filename, 'w', encoding='utf-8') as file:
+        json.dump(data, file, indent=4, ensure_ascii=False)
+  ```
 
 - [utf vs unicode][1]
   - [unicode -> utf-8][2]
