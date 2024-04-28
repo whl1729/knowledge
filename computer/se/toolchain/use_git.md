@@ -1,5 +1,23 @@
 # Git 使用笔记
 
+- [Git 设置使用 Beyond Compare 作为 diff 和 merge 工具][2]
+
+  ```sh
+  # 设置 diff 工具
+  git config --global diff.tool bc
+  git config --global difftool.bc.path "c:/Program Files/Beyond Compare 5/bcomp.exe"
+
+  # 设置 merge 工具
+  git config --global merge.tool bc
+  git config --global mergetool.bc.path "c:/Program Files/Beyond Compare 5/bcomp.exe"
+
+  # 对比差异
+  git difftool
+
+  # 合并
+  git mergetool
+  ```
+
 - Git staging area
   - The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
   - Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.
@@ -98,4 +116,4 @@
   ```
 
   [1]: https://git-scm.com/docs/git-log
-
+  [2]: https://www.scootersoftware.com/kb/vcs
