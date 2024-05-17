@@ -1,5 +1,11 @@
 # Ubuntu 系统使用笔记
 
+- [在 Ubuntu 系统访问 Windows 共享目录][2]
+
+  ```sh
+  sudo mount -t cifs //IP_ADDRESS/FOLDER_NAME /mnt/windows -o username=USERNAME,password=PASSWORD
+  ```
+
 - [CDPATH: 为 cd 命令定义基础目录][1]
 
   ```sh
@@ -18,3 +24,4 @@
 > 但可以 Windows 系统的 WLAN IP 地址（192.168.14.185）来访问 Windows 端口。
 
   [1]: https://linux.101hacks.com/cd-command/cdpath/
+  [2]: https://www.javatpoint.com/how-to-access-windows-shared-folder-from-ubuntu
