@@ -122,6 +122,9 @@
   - AI（adequate intake）：适宜摄入量
   - UL（Tolerated Upper Intake Lever）：可耐受最高摄入量
   - EAR（Estimated Average Requirement）：平均需要量
+  - AMDR（Acceptable Macronutrient Distribution Ranges）：宏量营养素可接受范围，即脂肪、蛋白质和碳水化合物理想摄入范围
+  - PI（Population Intervention）：预防非传染性慢性病的建议摄入量，以预防非传染性慢性病发生的推荐摄入量
+  - SPL（Suggested Priority Level）：特定建议值，指植物化合物有利于维护人体健康的摄入量
 
 - 婴幼儿、 青少年、 孕妇及育龄妇女、 老年人是**铁缺乏**的高发人群
 
