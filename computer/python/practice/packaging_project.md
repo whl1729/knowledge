@@ -1,4 +1,9 @@
-# pip 的 git+ 协议
+# Python 项目打包
+
+## `setup.py` 文件示例
+
+- [A sample Python project][2]
+  - [setup.py example][3]
 
 ## 如何支持 pip git+ 安装
 
@@ -21,33 +26,10 @@
    在这里，`your_username`是你的GitLab用户名，`your_package_name`是你的仓库名称，`branch_or_tag`是你想要安装的分支或标签的名称。如果不指定分支或标签，`pip`将默认安装`master`分支（或`main`分支，取决于你的仓库设置）。
 请注意，这种方法要求安装者有一个有效的Python环境，并且已经安装了`git`。此外，由于这种安装方式直接从源代码安装，用户可能需要在安装前满足你的库的依赖项。在你的`README.md`中提供安装说明是一个好主意，这样用户就知道如何安装你的库了。
 
-## `setup.py` 文件示例
-
-```python
-from setuptools import setup, find_packages
-
-setup(
-    name='your_package_name',
-    version='0.1.0',
-    author='Your Name',
-    author_email='your.email@example.com',
-    description='A brief description of the package',
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
-    url='https://gitlab.com/your_username/your_package_name',
-    packages=find_packages(),
-    install_requires=[
-        # 依赖列表
-    ],
-    classifiers=[
-        # 分类器列表，用于描述你的包的分类信息
-    ],
-    python_requires='>=3.6',  # 指定支持的Python版本
-)
-```
-
 ## 参考资料
 
 - [花了两天，终于把 Python 的 setup.py 给整明白了][1]
 
   [1]: https://zhuanlan.zhihu.com/p/276461821
+  [2]: https://github.com/pypa/sampleproject
+  [3]: https://github.com/pypa/sampleproject/blob/db5806e0a3204034c51b1c00dde7d5eb3fa2532e/setup.py
