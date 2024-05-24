@@ -45,3 +45,9 @@ setup(
     python_requires='>=3.6',  # 指定支持的Python版本
 )
 ```
+
+## 参考资料
+
+- [花了两天，终于把 Python 的 setup.py 给整明白了][1]
+
+  [1]: https://zhuanlan.zhihu.com/p/276461821
