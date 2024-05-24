@@ -1,5 +1,11 @@
 # Git 使用笔记
 
+- Git diff 显示特殊字符
+
+  ```sh
+  git diff --ws-error-highlight=all
+  ```
+
 - Git 设置本地分支与远端分支的映射关系
 
   ```sh
@@ -116,7 +122,7 @@
   git config --global alias.ci 'commit'
   git config --global alias.ciam 'commit --amend --no-edit'
   git config --global alias.co 'checkout'
-  git config --global alias.d 'diff'
+  git config --global alias.d 'diff --ws-error-highlight=all'
   git config --global alias.l 'log'
   git config --global alias.last 'log -1 HEAD --stat'
   git config --global alias.ll 'log --oneline'

@@ -11,8 +11,8 @@
   ```
 
 2. Add a pre-commit configuration
-  - create a file named .pre-commit-config.yaml
-  - you can generate a very basic configuration using pre-commit sample-config
+   - create a file named .pre-commit-config.yaml
+   - you can generate a very basic configuration using pre-commit sample-config
 
 3. Install git hook script for pre-commit stage
 

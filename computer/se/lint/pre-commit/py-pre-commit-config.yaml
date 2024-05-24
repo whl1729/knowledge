@@ -14,11 +14,10 @@ repos:
     rev: v3.1.0
     hooks:
       - id: reorder-python-imports
-  - repo: https://github.com/hadialqattan/pycln
-    rev: v1.3.3
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.1.1
     hooks:
-      # A formatter for finding and removing unused import statements.
-      - id: pycln
+    - id: autoflake
   - repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
