@@ -24,10 +24,10 @@
   for f in "${foo[@]}"; do echo $f; done  # 打印一行，内容为 "hello world"
   ```
 
-- 获取当前脚本的绝对路径
+- 获取当前脚本所在目录的绝对路径
 
   ```sh
-  SCRIPTPATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
+  SCRIPT_DIR="$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)"
   ```
 
   [1]: https://www.baeldung.com/linux/ifs-shell-variable
