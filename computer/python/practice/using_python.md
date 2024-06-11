@@ -1,5 +1,22 @@
 # Python 使用笔记
 
+## 编程风格
+
+- [Python 代码注释][4]
+
+```python
+"""Gets and prints the spreadsheet's header columns
+
+Args:
+    file_loc (str): The file location of the spreadsheet
+    print_cols (bool): A flag used to print the columns to the console
+        (default is False)
+
+Returns:
+    list: a list of strings representing the header columns
+"""
+```
+
 ## 安装
 
 - [编译 Ubuntu 16.04 + Python 3.8 的 docker 镜像][3]
@@ -110,3 +127,4 @@
   [1]: https://stackoverflow.com/a/643810
   [2]: https://stackoverflow.com/a/27939161
   [3]: https://medium.com/howtorapeurjob/how-to-build-python3-8-in-ubuntu-16-04-bc559ac1477c
+  [4]: https://realpython.com/documenting-python-code/
