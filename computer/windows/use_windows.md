@@ -1,5 +1,7 @@
 # Windows 系统使用笔记
 
+- Windows 查看可执行文件的路径：`(get-command git.exe).Path`
+
 - Windows 安装和配置 OpenSSH 服务器
   - [适用于 Windows 的 OpenSSH 入门][2]
   - [Setting up OpenSSH for Windows using public key authentication][3]
