@@ -8,6 +8,10 @@
 
 ## FAQs
 
+- [设置 Markdown 缩进 2 个空格][5]
+  - Disable `Editor: Detect Indentation`
+  - Set `Editor: Tab Size` to 2
+
 - [关闭光标闪烁][4]
   - Open Settings GUI: Press `Ctrl + ,`
   - Type "cursor blinking" in the search bar
@@ -61,3 +65,4 @@
   [2]: https://stackoverflow.com/a/66281531
   [3]: https://stackoverflow.com/a/57669739/11467929
   [4]: https://stackoverflow.com/a/78468225
+  [5]: https://stackoverflow.com/a/38556923
