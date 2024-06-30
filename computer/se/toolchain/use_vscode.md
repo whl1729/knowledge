@@ -8,6 +8,11 @@
 
 ## FAQs
 
+- [关闭光标闪烁][4]
+  - Open Settings GUI: Press `Ctrl + ,`
+  - Type "cursor blinking" in the search bar
+  - Change the relevant entry to "solid" from "blinking"
+
 - [解决 vscode 无法解析 Python import 的模块的问题][3]
 
   ```json
@@ -55,3 +60,4 @@
   [1]: https://stackoverflow.com/a/56781109
   [2]: https://stackoverflow.com/a/66281531
   [3]: https://stackoverflow.com/a/57669739/11467929
+  [4]: https://stackoverflow.com/a/78468225
