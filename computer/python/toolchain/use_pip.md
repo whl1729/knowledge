@@ -1,5 +1,8 @@
 # pip 使用笔记
 
+- 查看安装失败的 package 被谁依赖
+  - 查看报错日志里 `from xxx` 的信息即可，比如：`Collecting PyYAML<6,>=3.10 (from docker-compose==1.29.2->-r requirements.txt (line 2))`
+
 - pip 使用清华源
   - 临时使用清华源
 
