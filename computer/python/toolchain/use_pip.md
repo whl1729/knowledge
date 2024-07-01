@@ -1,5 +1,12 @@
 # pip 使用笔记
 
+- 在 `pyproject.toml` 配置需要打包的文件（比如你想打包 `foo/can/interfaces/bmcan/bar.dll`）
+
+  ```toml
+  [tool.setuptools.package-data]
+  "foo.can.interfaces.bmcan" = ["bar.dll"]
+  ```
+
 - 查看安装失败的 package 被谁依赖
   - 查看报错日志里 `from xxx` 的信息即可，比如：`Collecting PyYAML<6,>=3.10 (from docker-compose==1.29.2->-r requirements.txt (line 2))`
 
