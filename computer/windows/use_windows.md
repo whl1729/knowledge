@@ -28,6 +28,10 @@ wmic process where "name='chrome.exe'" get ProcessId,ExecutablePath,CommandLine
 wmic process where "name like '%python.exe%'" get ProcessId,ExecutablePath,CommandLine
 ```
 
+## Windows 系统推荐安装的工具
+
+- Everything
+
 ## Windows terminal
 
 - 关闭光标闪烁
