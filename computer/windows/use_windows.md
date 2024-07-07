@@ -32,6 +32,13 @@ wmic process where "name like '%python.exe%'" get ProcessId,ExecutablePath,Comma
 
 - Everything
 
+- [Ventoy][5]: 新一代多系统启动U盘解决方案
+
+- 管培喆推荐的电影下载工具
+  - [jxxghp-nas-tools][6]: 影视资源整合
+  - [qBittorrent - A BitTorrent client in Qt][7]: 影视资源下载
+  - [jellyfin][8]: 在线观看
+
 ## Windows terminal
 
 - 关闭光标闪烁
@@ -44,3 +51,7 @@ wmic process where "name like '%python.exe%'" get ProcessId,ExecutablePath,Comma
   [2]: https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui
   [3]: https://stackoverflow.com/a/50502015/11467929
   [4]: https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_server_configuration#configuring-the-default-shell-for-openssh-in-windows
+  [5]: https://www.ventoy.net/cn/
+  [6]: https://github.com/carolcoral/jxxghp-nas-tools
+  [7]: https://github.com/qbittorrent/qBittorrent
+  [8]: https://github.com/jellyfin/jellyfin
