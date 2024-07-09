@@ -4,6 +4,10 @@
 
 - [PID控制算法原理（抛弃公式，从本质上真正理解PID控制）][13]
 
+## CSDN 博客
+
+- [AdamShan（申泽邦）][14]
+
 ### 知乎专栏
 
 - [火车侠的自动驾驶][1]
@@ -19,6 +23,7 @@
 - [Carla Robotaxi 仿真][11]
 - [小飞自动驾驶系列分享][12]
 
+  [14]: https://blog.csdn.net/AdamShan
   [13]: https://zhuanlan.zhihu.com/p/39573490
   [1]: https://www.zhihu.com/column/c_1608829622761701376
   [2]: https://www.zhihu.com/column/c_1115187700181020672
