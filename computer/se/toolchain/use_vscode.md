@@ -8,6 +8,8 @@
 
 ## FAQs
 
+- [设置自动加载 Python 虚拟环境][6]
+
 - [设置 Markdown 缩进 2 个空格][5]
   - Disable `Editor: Detect Indentation`
   - Set `Editor: Tab Size` to 2
@@ -66,3 +68,4 @@
   [3]: https://stackoverflow.com/a/57669739/11467929
   [4]: https://stackoverflow.com/a/78468225
   [5]: https://stackoverflow.com/a/38556923
+  [6]: https://stackoverflow.com/a/65650691/11467929
