@@ -1,8 +1,13 @@
 # 自动驾驶学习笔记
 
-## 参考资料
+## 算法
 
 - [PID控制算法原理（抛弃公式，从本质上真正理解PID控制）][13]
+- [Algorithms for Automated Driving][15]
+
+## 课程
+
+- [Introduction to Self-Driving Cars][16]
 
 ## CSDN 博客
 
@@ -23,6 +28,8 @@
 - [Carla Robotaxi 仿真][11]
 - [小飞自动驾驶系列分享][12]
 
+  [16]: https://www.coursera.org/learn/intro-self-driving-cars
+  [15]: https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Introduction/intro.html
   [14]: https://blog.csdn.net/AdamShan
   [13]: https://zhuanlan.zhihu.com/p/39573490
   [1]: https://www.zhihu.com/column/c_1608829622761701376
