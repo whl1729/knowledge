@@ -1,5 +1,11 @@
 # Git 使用笔记
 
+- 解决 gitk 中文乱码的问题
+
+  ```sh
+  git config --global gui.encoding utf-8
+  ```
+
 - Git diff 显示特殊字符
 
   ```sh
