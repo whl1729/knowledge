@@ -1,5 +1,9 @@
 # Python API 使用笔记
 
+- `abstractmethod`
+  - `abstractmethod` 不会检查继承类实现的方法的参数类型和数量是否一致
+  - 如果 `abstractmethod` 进行了类型注解（哪怕是部分注解），mypy 会检查继承类实现的方法的参数类型和数量；否则也不会检查
+
 - `threading.Thread`
   - 创建线程时，如果只需要传入一个参数 `foo`，那么写成 `args=[foo]` 或者 `args=(foo,)`
   - 如果使用第二种写法，**一定不要忘记后面的逗号**，否则会报错，甚至出现线程没创建成功但也没报错的奇葩现象！
