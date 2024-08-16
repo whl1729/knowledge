@@ -1,5 +1,15 @@
 # Git 使用笔记
 
+- [支持本地克隆][3]
+
+  ```sh
+  git config --global protocol.file.allow always
+  git clone --recurse-submodules /Volumes/path/to/repository
+
+  # or
+  git -c protocol.file.allow=always clone --recurse-submodules /Volumes/path/to/repository
+  ```
+
 - 解决 gitk 中文乱码的问题
 
   ```sh
@@ -141,3 +151,4 @@
 
   [1]: https://git-scm.com/docs/git-log
   [2]: https://www.scootersoftware.com/kb/vcs
+  [3]: https://stackoverflow.com/a/76108559/11467929
