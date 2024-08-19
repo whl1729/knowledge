@@ -1,5 +1,28 @@
 # Ubuntu 系统使用笔记
 
+- 在 Ubuntu 中配置开机自启动 bash 脚本（以 `cyber-dail-news` 为例）
+  - 在 `/etc/systemd/system` 目录下创建新文件 `cyber-daily-news.service`，并添加以下内容
+  
+  ```bash
+  [Unit]
+  Description=Cyber Daily News
+  After=network.target
+
+  [Service]
+  Type=forking
+  ExecStart=/home/along/src/cyber-daily-news/script/start.sh
+  Restart=on-failure
+  RestartSec=10
+  StartLimitIntervalSec=60
+  StartLimitBurst=5
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+
+  - `sudo systemctl daemon-reload`
+  - `sudo systemctl restart cyber-daily-news.service`
+
 - [在 Ubuntu 系统访问 Windows 共享目录][2]
 
   ```sh
