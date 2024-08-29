@@ -2,6 +2,20 @@
 
 [pre-commmit][1] is a framework for managing and maintaining multi-language pre-commit hooks.
 
+## FAQs
+
+- 屏蔽 hook 错误码：编写自定义钩子脚本
+
+```yaml
+- repo: local
+  hooks:
+    - id: html-tidy
+      name: HTML Tidy
+      entry: bash -c 'tidy -modify -q -i --show-warnings no "$@" || [[ $? -eq 1 ]]'
+      language: system
+      files: \.html$
+```
+
 ## Quick Start
 
 1. Install pre-commit
@@ -68,7 +82,7 @@ You can find a lot of useful git hooks in [pre-commit supported hooks][2].
 
 ```yaml
 repos:
-  - repo: https://hub.fastgit.xyz/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
       - id: trailing-whitespace
@@ -81,7 +95,7 @@ repos:
 
 ```yaml
 repos:
-  - repo: https://hub.fastgit.xyz/commitizen-tools/commitizen
+  - repo: https://github.com/commitizen-tools/commitizen
     rev: v2.27.0
     hooks:
       - id: commitizen
@@ -92,7 +106,7 @@ repos:
 
 ```yaml
 repos:
-  - repo: https://hub.fastgit.xyz/markdownlint/markdownlint
+  - repo: https://github.com/markdownlint/markdownlint
     rev: v0.11.0
     hooks:
     - id: markdownlint
@@ -120,4 +134,3 @@ repos:
   [1]: https://pre-commit.com/
   [2]: https://pre-commit.com/hooks.html
   [3]: https://github.com/markdownlint/markdownlint/blob/main/.mdl_style.rb
-  [4]: https://github.com/markdownlint/markdownlint/blob/main/docs/configuration.md#specifying-which-rules-mdl-processes
