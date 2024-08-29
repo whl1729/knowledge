@@ -107,6 +107,9 @@ Returns:
 
 ## Python 虚拟环境
 
+- Python 虚拟环境的依赖管理
+  - 比如我本地环境安装了 pytest，虚拟环境中没安装 pytest，我运行 pytest 后，将会在本地环境查找模块，这点要特别注意
+
 - Tell Ubuntu that python is python3
 
   ```sh
