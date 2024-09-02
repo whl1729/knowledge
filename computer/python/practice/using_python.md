@@ -1,5 +1,12 @@
 # Python 使用笔记
 
+- Python debugger 配置虚拟环境
+  - 在项目根目录的 `.env` 文件中设置 `PYTHONPATH`
+
+```bash
+PYTHONPATH=..:${PYTHONPATH}
+```
+
 ## import
 
 - 一般而言，Python 程序里同一个模块只会被导入一次。但如果你使用不同的路径（比如同时使用绝对路径和相对路径），就可能会被导入多次。
