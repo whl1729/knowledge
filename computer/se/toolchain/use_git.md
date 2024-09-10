@@ -1,5 +1,11 @@
 # Git 使用笔记
 
+- [自动将 Windows 的换行符 `crlf` 转化为 `lf`][4]
+
+  ```sh
+  git config --global core.autocrlf true
+  ```
+
 - [支持本地克隆][3]
 
   ```sh
@@ -152,3 +158,4 @@
   [1]: https://git-scm.com/docs/git-log
   [2]: https://www.scootersoftware.com/kb/vcs
   [3]: https://stackoverflow.com/a/76108559/11467929
+  [4]: https://stackoverflow.com/a/1889699/11467929
