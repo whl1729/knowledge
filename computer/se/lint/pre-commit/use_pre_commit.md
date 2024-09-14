@@ -102,6 +102,48 @@ repos:
         stages: [commit-msg]
 ```
 
+### markdownlint-cli
+
+markdownlint-cli 是 markdownlint 的 CLI 工具，相比后者更好用一些（比如配置文件支持 JSON 格式）。
+
+```yaml
+repos:
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.29.0  # 使用最新版本或你需要的版本
+    hooks:
+      - id: markdownlint
+        args: ["--config", ".markdownlint.json"]
+```
+
+其中 `.markdownlint.json` 文件可以指定屏蔽某些告警：
+
+```json
+{
+  "MD013": false,
+  "MD029": false
+}
+```
+
+如果由于网络问题无法下载 markdownlint-cli github 仓库，也可以使用 npm 安装它：
+
+```sh
+npm install -g markdownlint-cli
+```
+
+然后在 `.pre-commit.yaml` 中使用以下配置：
+
+```yaml
+repos:
+  - repo: local
+    hooks:
+      - id: markdownlint
+        name: markdownlint
+        entry: markdownlint
+        language: system
+        types: [markdown]
+        args: ["--config", ".markdownlint.json"]
+```
+
 ### Markdownlint
 
 ```yaml
