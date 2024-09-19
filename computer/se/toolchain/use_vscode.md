@@ -8,6 +8,26 @@
 
 ## FAQs
 
+- 设置命令行参数
+  - 点击侧边栏顶部的齿轮图标（或点击「创建launch.json文件」链接），这将打开或创建一个 launch.json 文件。
+  - 在相应的配置中，添加 "args" 字段来指定命令行参数。
+
+  ```json
+  {
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["arg1", "arg2"]
+        }
+    ]
+  }
+  ```
+
 - [设置 Python Tab 键缩进4个空格][7]
 
   ```json
