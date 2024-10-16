@@ -3,5 +3,7 @@
 - [Visual Studio 快捷键][1]
   - `Ctrl + -`: 跳转到上一个位置
   - `Ctrl + Shift + -`: 跳转到下一个位置
+  - `Ctrl + Shift + PgDn`: 跳转到下一个 Terminal
+  - `Ctrl + Shift + PgUp`: 跳转到上一个 Terminal
 
   [1]: https://learn.microsoft.com/zh-cn/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2022
