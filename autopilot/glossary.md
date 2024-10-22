@@ -4,6 +4,7 @@ WARNING: 以下术语的英文全称及中文描述主要借助 GPT 查询而得
 
 | 英文缩写 | 英文全称 | 中文描述 |
 | -- | -- | -- |
+| ABA | Automatic Braking Assistance | 主动制动辅助系统 |
 | ABS_ESP | Anti-lock Braking System / Electronic Stability Program | 防抱死制动系统 / 电子稳定程序 |
 | CGW | Central Gateway | 中央网关。主要功能是管理和协调车辆内部的各个电子控制单元之间的通信 |
 | EPS | Electric Power Steering | 电动助力转向 |
