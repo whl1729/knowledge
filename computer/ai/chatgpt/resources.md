@@ -7,6 +7,7 @@
 - [OpenAI Cookbook: Techniques to improve reliability][20]
 - [Lil'Log: Prompt Engineering][22]
 - [Learn Prompting][24]
+- [通往 AGI 之路][25]
 
 ## 视频
 
@@ -67,3 +68,4 @@
   [22]: https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
   [23]: https://www.youtube.com/watch?v=kCc8FmEb1nY
   [24]: https://learnprompting.org/docs/intro
+  [25]: https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e
