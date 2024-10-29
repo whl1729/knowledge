@@ -1,5 +1,14 @@
 # Python 使用笔记
 
+- [Python 类里面注解自身（Forward references][6]
+  - 使用引号将类型名括起来即可
+
+```python
+class Foo:
+  def load() -> 'Foo':
+    pass
+```
+
 - [Python debugger 配置 Python 虚拟环境][5]: `Select Interpreter`
 
 - Python debugger 配置 `PYTHONPATH`
@@ -150,3 +159,4 @@ Returns:
   [3]: https://medium.com/howtorapeurjob/how-to-build-python3-8-in-ubuntu-16-04-bc559ac1477c
   [4]: https://realpython.com/documenting-python-code/
   [5]: https://stackoverflow.com/a/54030980/11467929
+  [6]: https://stackoverflow.com/a/41135046
