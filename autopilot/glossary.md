@@ -20,3 +20,4 @@ WARNING: 以下术语的英文全称及中文描述主要借助 GPT 查询而得
 | SAS | Steering Angle Sensor | 转向角传感器 |
 | SGU | Sensor Gateway Unit | 传感器网关单元。SGU 通常负责收集和处理来自多个传感器的数据，并将这些数据传输到其他电子控制单元（ECU）或中央处理系统。它充当传感器与车辆其他系统之间的桥梁。 |
 | TBOX    | Telematics Box | 车载信息通信盒 |
+| VLC | Vehicle Longitudinal Control | 车辆纵向控制 |
