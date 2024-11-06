@@ -12,6 +12,8 @@ WARNING: 以下术语的英文全称及中文描述主要借助 GPT 查询而得
 | CGW | Central Gateway | 中央网关。主要功能是管理和协调车辆内部的各个电子控制单元之间的通信 |
 | EPB | Electronic Parking Brake | 电子驻车制动系统 |
 | EPS | Electric Power Steering | 电动助力转向 |
+| ESC | Electronic Stability Control | 电子稳定控制系统，又称为 ESP |
+| ESP | Electronic Stability Program | 电子稳定程序，又称为 ESC |
 | FCM | Front Camera Module | 前置摄像头模块 |
 | FCM | Forward Collision Mitigation | 前方碰撞缓解系统。负责监测车辆前方的障碍物，并在检测到潜在碰撞风险时采取措施，如警告驾驶员或自动施加制动，以减少碰撞的可能性或减轻碰撞的严重性。 |
 | FLZCU | Front Left Zone Control Unit | 前左区域控制单元。FLZCU 通常负责管理和控制车辆前左侧的传感器和执行器，如雷达、摄像头、灯光系统等，以确保该区域的安全和功能正常。 |
