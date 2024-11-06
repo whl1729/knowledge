@@ -22,6 +22,9 @@ WARNING: 以下术语的英文全称及中文描述主要借助 GPT 查询而得
 | HBA | Hydraulic Brake Assist | 液压制动辅助 |
 | HCU | Hybrid Control Unit | 混合动力控制单元。HCU 负责管理和协调混合动力系统中的电动机和内燃机的工作，包括能量回收、动力分配、充电管理等，以优化车辆的性能和燃油效率。 |
 | IES | Intelligent Evasion System | 智慧躲闪系统 |
+| LDP | Lane Departure Prevention | 车道偏离预防 |
+| LDW | Lane Departure Warning | 车道偏离预警 |
+| LKA | Lane Keeping Assist | 车道保持辅助 |
 | RLCR | Rear Left Corner Radar | 后左角雷达。RLCR 是安装在车辆后左角的雷达传感器，主要用于监测车辆后方和侧后方的环境，帮助实现盲点检测、车道变更辅助和倒车辅助等功能。 |
 | RRCR | Rear Right Corner Radar | 后右角雷达。RRCR 是安装在车辆后右角的雷达传感器，功能与 RLCR 类似，主要用于监测车辆后方和侧后方的环境，提供盲点检测、车道变更辅助和倒车辅助等功能。 |
 | SAS | Steering Angle Sensor | 转向角传感器 |
