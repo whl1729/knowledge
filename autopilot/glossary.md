@@ -10,6 +10,7 @@ WARNING: 以下术语的英文全称及中文描述主要借助 GPT 查询而得
 | AEB | Automatic Emergency Braking | 自动紧急制动 |
 | AWB | Automatic Warning Brake | 自动警告制动，又称为短促制动（Brake Jerk），点刹报警（触觉类）功能 |
 | CGW | Central Gateway | 中央网关。主要功能是管理和协调车辆内部的各个电子控制单元之间的通信 |
+| ELKA | Emergency lane keep assist | 紧急车道保持辅助系统 |
 | EPB | Electronic Parking Brake | 电子驻车制动系统 |
 | EPS | Electric Power Steering | 电动助力转向 |
 | ESC | Electronic Stability Control | 电子稳定控制系统，又称为 ESP |
