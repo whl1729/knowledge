@@ -3,6 +3,11 @@
 ## BUSMASTER
 
 - 切换十进制/十六进制：`view` - `Hex`
+- 加载 DBC
+  - `Database` - `Associate`，然后选择 DBC 文件
+  - `Message Window`: 勾选 `Overwrite` 和 `Interpret`
+
+  ![busmaster_load_dbc](./images/busmaster_load_dbc.jpg)
 
 ## BUSMUST SDK
 
