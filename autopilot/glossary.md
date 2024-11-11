@@ -25,6 +25,7 @@ WARNING: 以下术语的英文全称及中文描述主要借助 GPT 查询而得
 | LDP | Lane Departure Prevention | 车道偏离预防 |
 | LDW | Lane Departure Warning | 车道偏离预警 |
 | LKA | Lane Keeping Assist | 车道保持辅助 |
+| RCTB | Rear Cross Traffic Brake | 倒车横向制动 |
 | RLCR | Rear Left Corner Radar | 后左角雷达。RLCR 是安装在车辆后左角的雷达传感器，主要用于监测车辆后方和侧后方的环境，帮助实现盲点检测、车道变更辅助和倒车辅助等功能。 |
 | RRCR | Rear Right Corner Radar | 后右角雷达。RRCR 是安装在车辆后右角的雷达传感器，功能与 RLCR 类似，主要用于监测车辆后方和侧后方的环境，提供盲点检测、车道变更辅助和倒车辅助等功能。 |
 | SAS | Steering Angle Sensor | 转向角传感器 |
